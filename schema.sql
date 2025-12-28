@@ -1,0 +1,7 @@
+-- Create product schema
+CREATE TABLE IF NOT EXISTS products (
+  id INTEGER  PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  prize INTEGER NOT NULL,
+  stock INTEGER NOT NULL
+);

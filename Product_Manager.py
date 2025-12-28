@@ -53,4 +53,5 @@ class Product_Manger:
 
             # Init Product object
             product_obj = Product(name, prize, id) # Initiated product
-            data_base.upload(product_obj) # Default stock of 10
+            upload_product(product_obj)
+
