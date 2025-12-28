@@ -43,7 +43,7 @@ def fetch_target(id):
     print(f"querry set : {f}")
     cursor.execute(f"select name from products where id = {id}")
     row = cursor.fetchall()
-    return row
+    print(f"Row dataset : {row}")
 
 def update_db(opt, data, id): # tested ok
     """
@@ -62,10 +62,9 @@ def update_db(opt, data, id): # tested ok
     cursor.execute(q)
     conn.commit()
 
-def delete(id):
+def delete(id):  # tested ok | Data base clashes 
+    print(f"Id being provided {id}")
     q = f"delete from products where id = {id}"
-    print(f"Deleting following row {fetch_target(id)}")
-
     cursor.execute(q)
 
     conn.commit()

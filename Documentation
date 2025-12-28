@@ -1,5 +1,5 @@
-Core Units
 
+Core Units
 	- Product 
 		variables = name, prize, stock,id (self_generating)
 		Methods
@@ -24,3 +24,22 @@ Core Units
 		remove_product
 		update_product
 DB unit works with product manager to carry out operations
+
+## Testing and units development
+DB_Manager
+  - Working to make edits and DB modification
+  - Product Object
+      * Works at initiating product DB
+      * Connecting with DB to fetch Product for display
+      * Handles operations at Product level and manage dataset
+      * handeling dataset, Handeling modificaitons and updates
+
+CUREENT KNOWN TARGETS
+
+1. Make Product Object robust and connect well with DB for good communication
+2. DB-integration | Product to manage its content and stocks
+3. User object integration --> Generalise DB-Manager for working with user and product
+4. Initiating Transaction DB for simplicity with completing Whole Backend
+
++ make very simple working asthetic frontend
+
