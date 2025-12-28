@@ -1,0 +1,26 @@
+Core Units
+
+	- Product 
+		variables = name, prize, stock,id (self_generating)
+		Methods
+			Update()
+				~ Name, prize, stock
+			
+
+	- Product Management
+		variables = Product objects list
+		Methods
+			Fetch products() - Product list
+			delete_product() - Product deleting request to db unit
+			fetch_product() - return product object -- edit with product object
+			edit_product() - Editing product
+
+	- DB unit
+	features - Consistency in Data base for Ensuring persistent storage of data
+
+	variables = transactions, Product list
+	methods
+		add_products
+		remove_product
+		update_product
+DB unit works with product manager to carry out operations

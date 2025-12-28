@@ -13,5 +13,4 @@ Making it  moduler for intgration to other prjects
         - User information
         - User profile
     3. Admin pannel 
-# vrinda-cart
-# vrinda-cart
+
