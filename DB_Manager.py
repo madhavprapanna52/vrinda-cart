@@ -1,10 +1,10 @@
 """
-    function : Managing data base peristency and doing core crude operations
+    DB Manager
+    Works as DB end point to manage DB state and its tables
 
-    Features
-        - Adding Objects to the db
-        - Removing objects
-        - Finalizing crude operations
+    current : Working DB transactions
+    todo : Generalise DB end point for all objects of app to connect and perform operations
+ # TODO target 1 : Making DB generalised to work with different objects
 """
 
 import sqlite3
