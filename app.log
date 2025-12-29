@@ -1,0 +1,74 @@
+
+2025-12-29 18:55:35,992 | INFO | Searching for existing Product with collum : name and value :Laptop
+2025-12-29 18:55:35,992 | INFO | Searching querry 
+ : select * from products where name = 'Laptop' 
+
+2025-12-29 18:55:35,992 | INFO | Search result Target fetched : 
+ [] 
+
+2025-12-29 18:55:35,992 | WARNING | No Table with name : Laptop Making product row
+2025-12-29 18:55:35,992 | INFO | Injecting creation statement as : insert into products ('name', 'prize', 'stock') values ('Laptop', 1499, 1000) 
+2025-12-29 18:55:36,035 | INFO | Row creation output recieved :: 
+ {{ DB-Instance fetched }} 
+(1, 'Laptop', 1499, 1000) 
+ 
+
+2025-12-29 18:55:36,035 | INFO | Searching for existing Product with collum : name and value :Laptop
+2025-12-29 18:55:36,035 | INFO | Searching querry 
+ : select * from products where name = 'Laptop' 
+
+2025-12-29 18:55:36,035 | INFO | Search result Target fetched : 
+ [(1, 'Laptop', 1499, 1000)] 
+
+2025-12-29 18:55:36,035 | INFO | Update Querry requested to DB : update products set name = 'Lallantop' where id = 1
+2025-12-29 18:55:36,037 | INFO | Update Querry requested to DB : update products set stock = 12000 where id = 1
+2025-12-29 18:55:36,038 | INFO | Edits Executed
+2025-12-29 18:55:36,038 | INFO | Edits Ouput Inspection requied : 
+ {{ DB-Instance fetched }} 
+(1, 'Lallantop', 1499, 12000) 
+
+2025-12-29 18:57:19,601 | INFO | Searching for existing Product with collum : name and value :Laptop
+2025-12-29 18:57:19,601 | INFO | Searching querry 
+ : select * from products where name = 'Laptop' 
+
+2025-12-29 18:57:19,602 | INFO | Search result Target fetched : 
+ [] 
+
+2025-12-29 18:57:19,602 | WARNING | No Table with name : Laptop Making product row
+2025-12-29 18:57:19,602 | INFO | Injecting creation statement as : insert into products ('name', 'prize', 'stock') values ('Laptop', 1499, 1000) 
+2025-12-29 18:57:19,637 | INFO | Row creation output recieved :: 
+ {{ DB-Instance fetched }} 
+(1, 'Lallantop', 1499, 12000) 
+(2, 'Laptop', 1499, 1000) 
+ 
+
+2025-12-29 18:57:19,637 | INFO | Searching for existing Product with collum : name and value :Laptop
+2025-12-29 18:57:19,637 | INFO | Searching querry 
+ : select * from products where name = 'Laptop' 
+
+2025-12-29 18:57:19,637 | INFO | Search result Target fetched : 
+ [(2, 'Laptop', 1499, 1000)] 
+
+2025-12-29 18:57:19,637 | INFO | Update Querry requested to DB : update products set name = 'Lallantop' where id = 1
+2025-12-29 18:57:19,639 | INFO | Update Querry requested to DB : update products set stock = 12000 where id = 1
+2025-12-29 18:57:19,639 | INFO | Edits Executed
+2025-12-29 18:57:19,639 | INFO | Edits Ouput Inspection requied : 
+ {{ DB-Instance fetched }} 
+(1, 'Lallantop', 1499, 12000) 
+(2, 'Laptop', 1499, 1000) 
+
+2025-12-29 18:57:45,361 | INFO | Searching for existing Product with collum : name and value :Laptop
+2025-12-29 18:57:45,362 | INFO | Searching querry 
+ : select * from products where name = 'Laptop' 
+
+2025-12-29 18:57:45,362 | INFO | Search result Target fetched : 
+ [(2, 'Laptop', 1499, 1000)] 
+
+2025-12-29 18:57:45,362 | INFO | Update Querry requested to DB : update products set name = 'Lallantop' where id = 1
+2025-12-29 18:57:45,365 | INFO | Update Querry requested to DB : update products set stock = 12000 where id = 1
+2025-12-29 18:57:45,365 | INFO | Edits Executed
+2025-12-29 18:57:45,366 | INFO | Edits Ouput Inspection requied : 
+ {{ DB-Instance fetched }} 
+(1, 'Lallantop', 1499, 12000) 
+(2, 'Laptop', 1499, 1000) 
+

@@ -21,14 +21,14 @@ connection = sqlite3.connect("vrinda-cart.db")
 cursor = connection.cursor()
 
 # DB  Execution function
-def execute_it(querry, output_required):
-    if output_required:
-        log.info(f"Execution function running with \n {querry} output required")
+def execute_it(querry, output_required=0):
+    if output_required == 1:
         cursor.execute(querry)
         output_list = cursor.fetchall() # for fetching instance or DB debug
         return output_list
-    cursor.execute(querry)
-    connection.commit()
+    else:
+        cursor.execute(querry)
+        connection.commit()
 
 # TODO testing require for modification operations , creation working
 class DB_object:
@@ -65,32 +65,38 @@ class DB_object:
         connection.commit()
         output = self.fetch_instance()  # Instance after creation
         log.info(f"Row creation output recieved :: \n {output} \n")
+        if output:
+            return 1
+        else:
+            log.fatal("Not created for data request")
+            return 0
 
 
 
-    def edit_column(self, column_name, data, target_id):
+    def edit_column(self, column_name, data, target_id): # under testing
         if type(data) is str:
             querry = f"update {self.table_name} set {column_name} = '{data}' where id = {target_id}"
+            log.info(f"Update Querry requested to DB : {querry}")
             execute_it(querry) # Querry executed
         else:
             querry = f"update {self.table_name} set {column_name} = {int(data)} where id = {target_id}"
+            log.info(f"Update Querry requested to DB : {querry}")
             execute_it(querry)  # Executed querry
-        print(f"[*] Debug required with data : {data} and {column_name} collumn")
 
     def delete_column(self, target_id):
         querry = f"delete from {self.column_name} where id = {target_id}"
         execute_it(querry)
-        print("Delete Querry Executed")
+        log.info(f"Deleted ROW with id : {target_id}")
 
-    def search_row(self, target, value):  # Tested OK 
+    def search_row(self, target, value=""):  # Tested OK 
         '''
             If specific is given for string target then we can fetch
         '''
         log.info(f"Searching for existing Product with collum : {target} and value :{value}")
         if type(target) is str:
-            querry = f"select {target} from {self.table_name} where {target} = '{value}'"
+            querry = f"select * from {self.table_name} where {target} = '{value}'"
 
-            log.info(f"Searching for row with information : {querry}")
+            log.info(f"Searching querry \n : {querry} \n")
             output = execute_it(querry,1)
 
             log.info(f"Search result Target fetched : \n {output} \n")
@@ -98,9 +104,9 @@ class DB_object:
             return output
 
         # CRITICAL No screening for target is placed here
-        querry = f"select *  from {self.column_name} where id = {target}"
+        querry = f"select *  from {self.table_name} where id = {target}"
         result = execute_it(querry, 1) # expected to fetch output
-        log.info(f"ID searched for id : {id} got {result}")
+        log.info(f"ID searched |  id : {target} results : {result}")
         return result # Exepcted to fetch required output or refine with instance search
 
     def fetch_instance(self):  # tested OK 
@@ -112,7 +118,6 @@ class DB_object:
 
         for row in output:
             db_instance += f"{row} \n"
-        log.info(f"Feched DB-instance : \n {db_instance} \n")
         return db_instance
 
 
