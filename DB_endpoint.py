@@ -7,6 +7,15 @@
         - delete
 """
 import sqlite3
+import logging as log
+
+# Loging config
+log.basicConfig(
+    filename="app.log",      # file name
+    level=log.INFO,       # minimum level to record
+    format="%(asctime)s | %(levelname)s | %(message)s"
+)
+
 
 connection = sqlite3.connect("vrinda-cart.db")
 cursor = connection.cursor()
@@ -14,15 +23,14 @@ cursor = connection.cursor()
 # DB  Execution function
 def execute_it(querry, output_required):
     if output_required:
-        print(f"fExecution thing with {querry}") # Whats that grey thing ?? check out that : )
+        log.info(f"Execution function running with \n {querry} output required")
         cursor.execute(querry)
         output_list = cursor.fetchall() # for fetching instance or DB debug
         return output_list
     cursor.execute(querry)
     connection.commit()
-    print(f"[*] Querry Executed with request {querry}")
 
-# TODO testing required for DB object
+# TODO testing require for modification operations , creation working
 class DB_object:
     """
         Makes db connection for the object to perform basic operations 
@@ -43,21 +51,20 @@ class DB_object:
         self.instance = self.fetch_instance() # Fetch current state of DB
         # check instance for existance
 
-    def create_row(self, data):
+    def create_row(self, data):  # tested ok Working
         """
             data : dictionary of key value pair
         """
         querry = f"insert into {self.table_name}"
         values = tuple(data.keys())  # values 0th element should be unique
         data = tuple(data.values())
-        querry += f" {values} " + f" {data} "
-        output = execute_it(querry, 1)
-        print(f"Row creation output : {output}")
-        specific = ("id", )
-        id = self.search_row("id",["name",values[0]])
-        print("creation success full")
-        return id
-
+        # Querry is to the made with strict format
+        querry += f" {values} " + f"values {data} "
+        log.info(f"Injecting creation statement as : {querry}")
+        cursor.execute(querry)
+        connection.commit()
+        output = self.fetch_instance()  # Instance after creation
+        log.info(f"Row creation output recieved :: \n {output} \n")
 
 
 
@@ -75,27 +82,37 @@ class DB_object:
         execute_it(querry)
         print("Delete Querry Executed")
 
-    def search_row(self, target, value):
+    def search_row(self, target, value):  # Tested OK 
         '''
             If specific is given for string target then we can fetch
         '''
-        print(f"Initiating with {target} and {value}")
+        log.info(f"Searching for existing Product with collum : {target} and value :{value}")
         if type(target) is str:
             querry = f"select {target} from {self.table_name} where {target} = '{value}'"
 
-            print(f"Querry for injecting : {querry}")
+            log.info(f"Searching for row with information : {querry}")
             output = execute_it(querry,1)
+
+            log.info(f"Search result Target fetched : \n {output} \n")
+
             return output
 
-        # compose querry with required values
+        # CRITICAL No screening for target is placed here
         querry = f"select *  from {self.column_name} where id = {target}"
         result = execute_it(querry, 1) # expected to fetch output
+        log.info(f"ID searched for id : {id} got {result}")
         return result # Exepcted to fetch required output or refine with instance search
 
-    def fetch_instance(self):
+    def fetch_instance(self):  # tested OK 
         querry = f"select * from {self.table_name}"
-        output_list = execute_it(querry, 1)
-        for i in output_list:
-            print(i) # Improvement | Make it into string to fetch important things like colum informations
+        cursor.execute(querry)
+        output = cursor.fetchall()
+
+        db_instance = "{{ DB-Instance fetched }} \n"
+
+        for row in output:
+            db_instance += f"{row} \n"
+        log.info(f"Feched DB-instance : \n {db_instance} \n")
+        return db_instance
 
 
