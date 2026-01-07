@@ -1,0 +1,114 @@
+"""
+    User object
+    Manages user level things and transactions and dataset
+
+    variables -- DB-sync
+    user_name
+    password_hash
+    wallet
+    cart
+
+    operations
+    - Validating user
+    - Transactions handeling via transaction object through wallet
+    - Manage cart orders
+"""
+from DB_endpoint import *
+
+
+class User(General_obj):
+    '''
+        name
+        hashed_password
+        wallet 
+        purchase history
+    Initiate General DB-endpoint for making DB unit to work with
+
+    features
+    1. sotring sync data about user
+    2. mentain transaction table about transactions
+    3. Fetch user transactions from DB-endpoint - iNstance
+    4. Make mechanism for final cart --> purchaase --> wallet update --> stock update
+    '''
+    def __init__(self, user_details, end_point):
+        """
+            user_details
+            name : user_name
+            hashed_password : string hashed password
+            wallet : integer rupees
+
+        Purchase history is stored in different table for lookup
+        """
+        super().__init__(user_details, end_point)
+        # Initiate transaction endpoint to store the transactions and initiate products list for stock refle
+
+    def cart_manager(self, option, data=""):
+        """
+            options based operation
+        1 : fetch cart instance
+        2 : adding to cart the item
+        3 : removing item from cart
+        4 : updating stocks
+
+        Check at cart stage for stock out or block at frontend to buy empty items
+
+        cart storage system
+        Making string of cart information about user
+        format ->  dictionary based product name , prize and stock
+        initiating different DB-instances for users or storing with string based
+
+        Initiate cart thing when user selects any products
+
+        cart storage format
+        [
+        (product_id : id, quantity : number), ...
+        ]
+
+        Cart operations working fine
+        """
+        cart_instance = eval(self.obj_information["cart"])
+        increment_querry = False
+        # Cart Incremental update
+        
+        for i in range(0,len(cart_instance)):
+            element = list(cart_instance[i])
+            if element[0] == data[0]:
+                increment_querry = True
+                element[1] = int(element[1])
+                element[1] += int(data[1])
+                cart_instance[i] = tuple(element)  # final incerstion to the cart_instance
+        print(f"Incremental check results : {cart_instance}")
+
+        if option == 1:
+            return cart_instance
+        if option == 2 and not(increment_querry):
+            cart_instance.append(data)
+        if option == 3:
+            for i in range(0,len(cart_instance)):
+                elem = cart_instance[i]
+                if elem[0] == data[0]:
+                    cart_instance.remove(elem)
+
+            print(f"Deleted cart_instance : {cart_instance}")
+        edit_list = [("cart", str(cart_instance))]  # final edit list as per options
+        print(f"Edit list for updating : {edit_list}")
+        self.update(edit_list)
+
+            
+
+    def transaction_endpoint(self):
+        """
+            Initiating final cart transaction
+        Update user wallet and run cascade of other operations
+        Iterate all products and initiate their transaction endpoint, fetch prize
+        Build final bill, hit transaction DB table to update about user purchase
+
+        final_transaction_list = [ (product_name, prize, quantity) ...]
+        """
+        final_transaction_list = []
+        cart_instance = self.obj_information["cart"]
+        return None
+
+
+        
+ 

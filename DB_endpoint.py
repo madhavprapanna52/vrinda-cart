@@ -121,3 +121,58 @@ class DB_object:
         return db_instance
 
 
+# Generalised Object
+
+class General_obj:
+    '''
+        Base entity for all objects
+        Initiate DB-endpoint at big level for consistency
+        endpoint = DB_endpoint for respected table
+
+        Usage options
+        Mentain data details in dictonary as per schema
+        request for edits in list of tuples for edits
+        flows data in dictionary for edits
+
+    '''
+    def __init__(self,obj_details, end_point, search_anchor=""):
+        """
+            Search anchor based searching could be used for id based initialization
+        """
+        self.end_point = end_point
+        self.obj_information = {}
+
+        # search fetch anchor details are assumed as second data details
+        feilds = list(obj_details.keys())  # take feild list would be taken as argument
+        if search_anchor == "":
+            search_anchor = feilds[0]
+            anchor_value = obj_details[search_anchor]
+        else:
+            anchor_value = obj_details[search_anchor]  # searching word
+
+        # Dual Initiation logicanchor_value)
+
+        db_fetch = self.end_point.search_row(search_anchor,anchor_value)
+        if db_fetch == []:
+            log.warning(f"Searched for {anchor_value} Failed | Creating one Entry")
+            self.end_point.create_row(obj_details)
+            db_fetch = self.end_point.search_row(search_anchor, anchor_value)
+            
+        data_tuple = db_fetch[0] # DB response
+        i = 0
+        self.obj_information["id"] = data_tuple[0]  # Id required
+        for d in data_tuple[1:]:
+            self.obj_information[feilds[i]] = str(d)
+            i += 1
+
+    def info(self):
+        print(f"Object information fetched : {self.obj_information}")
+
+    def update(self, edit_list):
+        for edit in edit_list:
+            target_colum = edit[0]
+            data = edit[1]
+            self.end_point.edit_column(target_colum, data, int(self.obj_information["id"]))
+            log.info("Edits Executed")
+            log.info(f'Inspect changes : \n {self.end_point.fetch_instance()} \n ')
+
