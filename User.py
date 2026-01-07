@@ -15,6 +15,7 @@
 """
 from DB_endpoint import *
 from Product import *
+from Transaction import *
 
 
 class User(General_obj):
@@ -135,6 +136,18 @@ class User(General_obj):
             log.info("Payment successfull for products on the way")
             # run post payment methods
             make_bill(cart_instance, product_endpoint, stock_update=True)
+            # transaction db sync  -- transaction endpoint to implement
+            user_id = self.obj_information["id"]
+            products_list = cart_instance
+            transation_final = {"user_id":user_id, "bill":products_list}
+            transaction_endpoint = DB_object("transactions")
+
+            # Implement transaction end point
+            print(f"Details : {products_list}")
+            products_list = eval(products_list)
+            transaction_db(products_list, user_id, transaction_endpoint)
+
+
         else:
             log.info("Transaction terminated")
 
