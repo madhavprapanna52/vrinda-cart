@@ -135,7 +135,7 @@ class General_obj:
         flows data in dictionary for edits
 
     '''
-    def __init__(self,obj_details, end_point, search_anchor=""):
+    def __init__(self,obj_details, end_point,feilds, search_anchor=""):
         """
             Search anchor based searching could be used for id based initialization
         """
@@ -143,7 +143,7 @@ class General_obj:
         self.obj_information = {}
 
         # search fetch anchor details are assumed as second data details
-        feilds = list(obj_details.keys())  # take feild list would be taken as argument
+        # feilds = list(obj_details.keys())  # take feild list would be taken as argument
         if search_anchor == "":
             search_anchor = feilds[0]
             anchor_value = obj_details[search_anchor]

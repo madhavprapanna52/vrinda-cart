@@ -43,6 +43,19 @@ class User(General_obj):
         self.feilds = "name,password,wallet,cart".split(',')
         super().__init__(user_details, end_point, feilds=self.feilds)
         # Initiate transaction endpoint to store the transactions and initiate products list for stock refle
+    
+    def pay(self, amount):
+        balance = int(self.obj_information["wallet"])
+        if balance - amount > 0:
+            new_balance = balance - amount
+            edit_list = [("wallet",new_balance)]
+            self.update(edit_list)  # BUG update the object information also
+            log.info("Transaction debited from user account")
+            return 1 # deducted from user wallet
+        else:
+            log.info("Balance Not sufficient")
+            return 0
+
 
     def cart_manager(self, option, data=""):
         """
@@ -111,7 +124,20 @@ class User(General_obj):
         cart_instance = self.obj_information["cart"]
 
         final_bill = make_bill(cart_instance, product_endpoint)
-        print(f"Final Bill generated {final_bill}")
+        # Compute final and make transaction
+        total = 0
+        for elem in final_bill:
+            amount = int(elem[1]) * int(elem[2])
+            total += amount
+        # check feasibility
+        print(f"Final bill total : {total}")
+        if self.pay(total):
+            log.info("Payment successfull for products on the way")
+            # run post payment methods
+            make_bill(cart_instance, product_endpoint, stock_update=True)
+        else:
+            log.info("Transaction terminated")
 
-        return None
+
+
  

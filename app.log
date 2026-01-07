@@ -1,400 +1,118 @@
 
-2026-01-07 09:22:13,442 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:22:13,443 | INFO | Searching querry 
+2026-01-07 15:11:50,217 | INFO | Searching for existing Product with collum : name and value :apple_watch
+2026-01-07 15:11:50,217 | INFO | Searching querry 
  : select * from products where name = 'apple_watch' 
 
-2026-01-07 09:22:13,443 | INFO | Search result Target fetched : 
+2026-01-07 15:11:50,217 | INFO | Search result Target fetched : 
  [] 
 
-2026-01-07 09:22:13,443 | WARNING | Searched for apple_watch Failed | Creating one Entry
-2026-01-07 09:22:13,443 | INFO | Injecting creation statement as : insert into products ('name', 'prize', 'stock') values ('apple_watch', 300, 10) 
-2026-01-07 09:22:13,487 | INFO | Row creation output recieved :: 
+2026-01-07 15:11:50,217 | WARNING | Searched for apple_watch Failed | Creating one Entry
+2026-01-07 15:11:50,217 | INFO | Injecting creation statement as : insert into products ('name', 'prize', 'stock') values ('apple_watch', 2, 10) 
+2026-01-07 15:11:50,262 | INFO | Row creation output recieved :: 
  {{ DB-Instance fetched }} 
-(1, 'apple_watch', 300, 10) 
+(1, 'apple_watch', 2, 10) 
  
 
-2026-01-07 09:22:13,487 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:22:13,487 | INFO | Searching querry 
+2026-01-07 15:11:50,263 | INFO | Searching for existing Product with collum : name and value :apple_watch
+2026-01-07 15:11:50,263 | INFO | Searching querry 
  : select * from products where name = 'apple_watch' 
 
-2026-01-07 09:22:13,487 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
+2026-01-07 15:11:50,263 | INFO | Search result Target fetched : 
+ [(1, 'apple_watch', 2, 10)] 
 
-2026-01-07 09:22:13,487 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:22:13,487 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
+2026-01-07 15:11:50,263 | INFO | Searching for existing Product with collum : name and value :mac-book
+2026-01-07 15:11:50,263 | INFO | Searching querry 
+ : select * from products where name = 'mac-book' 
 
-2026-01-07 09:22:13,487 | INFO | Search result Target fetched : 
+2026-01-07 15:11:50,263 | INFO | Search result Target fetched : 
  [] 
 
-2026-01-07 09:22:13,488 | WARNING | Searched for Madahv Rimal Failed | Creating one Entry
-2026-01-07 09:22:13,488 | INFO | Injecting creation statement as : insert into users ('name', 'password', 'wallet', 'cart') values ('Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[]') 
-2026-01-07 09:22:13,490 | INFO | Row creation output recieved :: 
+2026-01-07 15:11:50,263 | WARNING | Searched for mac-book Failed | Creating one Entry
+2026-01-07 15:11:50,263 | INFO | Injecting creation statement as : insert into products ('name', 'prize', 'stock') values ('mac-book', 3, 10) 
+2026-01-07 15:11:50,267 | INFO | Row creation output recieved :: 
  {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[]') 
+(1, 'apple_watch', 2, 10) 
+(2, 'mac-book', 3, 10) 
  
 
-2026-01-07 09:22:13,490 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:22:13,490 | INFO | Searching querry 
+2026-01-07 15:11:50,267 | INFO | Searching for existing Product with collum : name and value :mac-book
+2026-01-07 15:11:50,267 | INFO | Searching querry 
+ : select * from products where name = 'mac-book' 
+
+2026-01-07 15:11:50,267 | INFO | Search result Target fetched : 
+ [(2, 'mac-book', 3, 10)] 
+
+2026-01-07 15:11:50,267 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
+2026-01-07 15:11:50,267 | INFO | Searching querry 
  : select * from users where name = 'Madahv Rimal' 
 
-2026-01-07 09:22:13,490 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[]')] 
+2026-01-07 15:11:50,267 | INFO | Search result Target fetched : 
+ [] 
 
-2026-01-07 09:22:13,490 | INFO | Update Querry requested to DB : update users set cart = '[(1, 10)]' where id = 1
-2026-01-07 09:22:13,493 | INFO | Edits Executed
-2026-01-07 09:22:13,493 | INFO | Inspect changes : 
+2026-01-07 15:11:50,267 | WARNING | Searched for Madahv Rimal Failed | Creating one Entry
+2026-01-07 15:11:50,267 | INFO | Injecting creation statement as : insert into users ('name', 'password', 'wallet', 'cart') values ('Madahv Rimal', 'ufd78t782buybt7rt', 10, '[(1,1),(2,1)]') 
+2026-01-07 15:11:50,270 | INFO | Row creation output recieved :: 
  {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 10)]') 
+(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 10, '[(1,1),(2,1)]') 
  
- 
-2026-01-07 09:22:15,786 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:22:15,786 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
 
-2026-01-07 09:22:15,786 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:22:15,786 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:22:15,786 | INFO | Searching querry 
+2026-01-07 15:11:50,270 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
+2026-01-07 15:11:50,270 | INFO | Searching querry 
  : select * from users where name = 'Madahv Rimal' 
 
-2026-01-07 09:22:15,786 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 10)]')] 
+2026-01-07 15:11:50,270 | INFO | Search result Target fetched : 
+ [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 10, '[(1,1),(2,1)]')] 
 
-2026-01-07 09:22:15,786 | INFO | Update Querry requested to DB : update users set cart = '[(1, 20)]' where id = 1
-2026-01-07 09:22:15,831 | INFO | Edits Executed
-2026-01-07 09:22:15,832 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 20)]') 
- 
- 
-2026-01-07 09:22:19,297 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:22:19,298 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:22:19,298 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:22:19,298 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:22:19,298 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:22:19,298 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 20)]')] 
-
-2026-01-07 09:22:19,298 | INFO | Update Querry requested to DB : update users set cart = '[(1, 30)]' where id = 1
-2026-01-07 09:22:19,343 | INFO | Edits Executed
-2026-01-07 09:22:19,343 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 30)]') 
- 
- 
-2026-01-07 09:22:20,315 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:22:20,315 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:22:20,315 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:22:20,315 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:22:20,315 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:22:20,315 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 30)]')] 
-
-2026-01-07 09:22:20,315 | INFO | Update Querry requested to DB : update users set cart = '[(1, 40)]' where id = 1
-2026-01-07 09:22:20,320 | INFO | Edits Executed
-2026-01-07 09:22:20,320 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 40)]') 
- 
- 
-2026-01-07 09:22:21,241 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:22:21,241 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:22:21,241 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:22:21,241 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:22:21,241 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:22:21,241 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 40)]')] 
-
-2026-01-07 09:22:21,241 | INFO | Update Querry requested to DB : update users set cart = '[(1, 50)]' where id = 1
-2026-01-07 09:22:21,246 | INFO | Edits Executed
-2026-01-07 09:22:21,246 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 50)]') 
- 
- 
-2026-01-07 09:22:22,548 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:22:22,548 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:22:22,548 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:22:22,548 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:22:22,548 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:22:22,548 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 50)]')] 
-
-2026-01-07 09:22:22,548 | INFO | Update Querry requested to DB : update users set cart = '[(1, 60)]' where id = 1
-2026-01-07 09:22:22,552 | INFO | Edits Executed
-2026-01-07 09:22:22,553 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 60)]') 
- 
- 
-2026-01-07 09:22:23,425 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:22:23,425 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:22:23,425 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:22:23,425 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:22:23,426 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:22:23,426 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 60)]')] 
-
-2026-01-07 09:22:23,426 | INFO | Update Querry requested to DB : update users set cart = '[(1, 70)]' where id = 1
-2026-01-07 09:22:23,430 | INFO | Edits Executed
-2026-01-07 09:22:23,430 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 70)]') 
- 
- 
-2026-01-07 09:23:16,689 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:23:16,689 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:23:16,689 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:23:16,689 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:23:16,689 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:23:16,689 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 70)]')] 
-
-2026-01-07 09:23:16,690 | INFO | Update Querry requested to DB : update users set cart = '[(1, 60)]' where id = 1
-2026-01-07 09:23:16,734 | INFO | Edits Executed
-2026-01-07 09:23:16,734 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 60)]') 
- 
- 
-2026-01-07 09:23:19,391 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:23:19,392 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:23:19,392 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:23:19,392 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:23:19,392 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:23:19,392 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 60)]')] 
-
-2026-01-07 09:23:19,392 | INFO | Update Querry requested to DB : update users set cart = '[(1, 50)]' where id = 1
-2026-01-07 09:23:19,438 | INFO | Edits Executed
-2026-01-07 09:23:19,438 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 50)]') 
- 
- 
-2026-01-07 09:25:19,140 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:25:19,140 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:25:19,140 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:25:19,140 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:25:19,140 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:25:19,140 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 50)]')] 
-
-2026-01-07 09:25:19,141 | INFO | Update Querry requested to DB : update users set cart = '[(1, 40)]' where id = 1
-2026-01-07 09:25:19,184 | INFO | Edits Executed
-2026-01-07 09:25:19,184 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 40)]') 
- 
- 
-2026-01-07 09:26:00,171 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:26:00,171 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:26:00,171 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:26:00,172 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:26:00,172 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:26:00,172 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 40)]')] 
-
-2026-01-07 09:29:41,483 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:29:41,484 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:29:41,484 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:29:41,484 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:29:41,484 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:29:41,484 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 40)]')] 
-
-2026-01-07 09:29:41,484 | INFO | Update Querry requested to DB : update users set cart = '[(1, 40)]' where id = 1
-2026-01-07 09:29:41,484 | INFO | Edits Executed
-2026-01-07 09:29:41,484 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 40)]') 
- 
- 
-2026-01-07 09:31:45,216 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:31:45,216 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:31:45,217 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:31:45,217 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:31:45,217 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:31:45,217 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(1, 40)]')] 
-
-2026-01-07 09:31:45,217 | INFO | Update Querry requested to DB : update users set cart = '[]' where id = 1
-2026-01-07 09:31:45,260 | INFO | Edits Executed
-2026-01-07 09:31:45,260 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[]') 
- 
- 
-2026-01-07 09:32:39,199 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 09:32:39,200 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 09:32:39,200 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 09:32:39,200 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 09:32:39,200 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 09:32:39,200 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[]')] 
-
-2026-01-07 09:32:39,200 | INFO | Update Querry requested to DB : update users set cart = '[(2, 2)]' where id = 1
-2026-01-07 09:32:39,204 | INFO | Edits Executed
-2026-01-07 09:32:39,205 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(2, 2)]') 
- 
- 
-2026-01-07 12:04:30,538 | INFO | Searching for existing Product with collum : id and value :1
-2026-01-07 12:04:30,538 | INFO | Searching querry 
+2026-01-07 15:11:50,270 | INFO | Searching for existing Product with collum : id and value :1
+2026-01-07 15:11:50,270 | INFO | Searching querry 
  : select * from products where id = '1' 
 
-2026-01-07 12:04:30,538 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
+2026-01-07 15:11:50,271 | INFO | Search result Target fetched : 
+ [(1, 'apple_watch', 2, 10)] 
 
-2026-01-07 12:05:25,603 | INFO | Searching for existing Product with collum : id and value :1
-2026-01-07 12:05:25,603 | INFO | Searching querry 
+2026-01-07 15:11:50,271 | INFO | Searching for existing Product with collum : id and value :2
+2026-01-07 15:11:50,271 | INFO | Searching querry 
+ : select * from products where id = '2' 
+
+2026-01-07 15:11:50,271 | INFO | Search result Target fetched : 
+ [(2, 'mac-book', 3, 10)] 
+
+2026-01-07 15:11:50,271 | INFO | Update Querry requested to DB : update users set wallet = 5 where id = 1
+2026-01-07 15:11:50,274 | INFO | Edits Executed
+2026-01-07 15:11:50,274 | INFO | Inspect changes : 
+ {{ DB-Instance fetched }} 
+(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 5, '[(1,1),(2,1)]') 
+ 
+ 
+2026-01-07 15:11:50,274 | INFO | Transaction debited from user account
+2026-01-07 15:11:50,274 | INFO | Payment successfull for products on the way
+2026-01-07 15:11:50,274 | INFO | Searching for existing Product with collum : id and value :1
+2026-01-07 15:11:50,274 | INFO | Searching querry 
  : select * from products where id = '1' 
 
-2026-01-07 12:05:25,603 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
+2026-01-07 15:11:50,274 | INFO | Search result Target fetched : 
+ [(1, 'apple_watch', 2, 10)] 
 
-2026-01-07 12:25:05,240 | INFO | Searching for existing Product with collum : id and value :1
-2026-01-07 12:25:05,240 | INFO | Searching querry 
- : select * from products where id = '1' 
-
-2026-01-07 12:25:05,240 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 12:35:01,028 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 12:35:01,028 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 12:35:01,028 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 12:35:01,029 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 12:35:01,029 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 12:35:01,029 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(2, 2)]')] 
-
-2026-01-07 12:35:01,029 | INFO | Update Querry requested to DB : update users set cart = '[(2, 4)]' where id = 1
-2026-01-07 12:35:01,037 | INFO | Edits Executed
-2026-01-07 12:35:01,037 | INFO | Inspect changes : 
+2026-01-07 15:11:50,275 | INFO | Update Querry requested to DB : update products set stock = 9 where id = 1
+2026-01-07 15:11:50,277 | INFO | Edits Executed
+2026-01-07 15:11:50,277 | INFO | Inspect changes : 
  {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(2, 4)]') 
+(1, 'apple_watch', 2, 9) 
+(2, 'mac-book', 3, 10) 
  
  
-2026-01-07 12:35:03,612 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 12:35:03,612 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
+2026-01-07 15:11:50,277 | INFO | Searching for existing Product with collum : id and value :2
+2026-01-07 15:11:50,277 | INFO | Searching querry 
+ : select * from products where id = '2' 
 
-2026-01-07 12:35:03,612 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
+2026-01-07 15:11:50,277 | INFO | Search result Target fetched : 
+ [(2, 'mac-book', 3, 10)] 
 
-2026-01-07 12:35:03,612 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 12:35:03,612 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 12:35:03,612 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(2, 4)]')] 
-
-2026-01-07 12:35:03,612 | INFO | Update Querry requested to DB : update users set cart = '[(2, 6)]' where id = 1
-2026-01-07 12:35:03,617 | INFO | Edits Executed
-2026-01-07 12:35:03,617 | INFO | Inspect changes : 
+2026-01-07 15:11:50,277 | INFO | Update Querry requested to DB : update products set stock = 9 where id = 2
+2026-01-07 15:11:50,279 | INFO | Edits Executed
+2026-01-07 15:11:50,279 | INFO | Inspect changes : 
  {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(2, 6)]') 
- 
- 
-2026-01-07 12:35:05,128 | INFO | Searching for existing Product with collum : name and value :apple_watch
-2026-01-07 12:35:05,128 | INFO | Searching querry 
- : select * from products where name = 'apple_watch' 
-
-2026-01-07 12:35:05,128 | INFO | Search result Target fetched : 
- [(1, 'apple_watch', 300, 10)] 
-
-2026-01-07 12:35:05,128 | INFO | Searching for existing Product with collum : name and value :Madahv Rimal
-2026-01-07 12:35:05,128 | INFO | Searching querry 
- : select * from users where name = 'Madahv Rimal' 
-
-2026-01-07 12:35:05,128 | INFO | Search result Target fetched : 
- [(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(2, 6)]')] 
-
-2026-01-07 12:35:05,129 | INFO | Update Querry requested to DB : update users set cart = '[(2, 8)]' where id = 1
-2026-01-07 12:35:05,133 | INFO | Edits Executed
-2026-01-07 12:35:05,133 | INFO | Inspect changes : 
- {{ DB-Instance fetched }} 
-(1, 'Madahv Rimal', 'ufd78t782buybt7rt', 2000, '[(2, 8)]') 
+(1, 'apple_watch', 2, 9) 
+(2, 'mac-book', 3, 9) 
  
  

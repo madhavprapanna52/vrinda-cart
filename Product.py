@@ -47,7 +47,7 @@ class Product(General_obj):
         self.update(edits)  # Making stock update
 
 
-def make_bill(cart_instance, end_point):  # Final bill is ready for calculation and transaction
+def make_bill(cart_instance, end_point, stock_update=False):  # Final bill is ready for calculation and transaction
     """
         Fetches Name and prize of products with end_point 
     """
@@ -58,6 +58,9 @@ def make_bill(cart_instance, end_point):  # Final bill is ready for calculation 
         detail = {"id":item[0]}
         print(f"Details for product : {detail}")
         product = Product(detail, end_point, anchor="id")
+        if stock_update:
+            product.transaction_endpoint(item[1])
+            continue
         name = product.obj_information["name"]
         prize = product.obj_information["prize"]
         element = (name, prize, item[1])

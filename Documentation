@@ -59,3 +59,13 @@ Back end almost completed with the above requirement of completing transaction f
 
 + make very simple working asthetic frontend
 
+
+-------------------------------------
+Issues and Problems to solve
+Feilds is being initiated with object details in general object thus fix it it take feilds as different
+	- Potential bugs and cascade , user and products initiation way have to be updated and update product initiation also
+  - Fixed bugs but needs refactorations
+
+-------------------------------------
+CODE NOT TESTED WITH EDGE CASES
+last feature required -- > add transaction syncs with DB end to make persistent history of transaction and trace user history
