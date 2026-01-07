@@ -20,12 +20,13 @@ class Product(General_obj):
         Goals
         sync with DB and mentain operations reliable for transaction and inventory
     """
-    def __init__(self, product_details, end_point):
+    def __init__(self, product_details, end_point, anchor=""):
         """
             Product Initiation with ID
             search db -- > fetch data --> Build details dictionary and call suepr initiation
         """
-        super().__init__(product_details,end_point)
+        self.feilds = 'name,prize,stock'.split(',')  # feilds list 
+        super().__init__(product_details,end_point,feilds=self.feilds, search_anchor=anchor)  # Initiate feilds as list of column name
 
     def transaction_endpoint(self, ordered=1):  # tested working
         '''
@@ -46,7 +47,24 @@ class Product(General_obj):
         self.update(edits)  # Making stock update
 
 
-def make_bill(cart_instance):
+def make_bill(cart_instance, end_point):  # Final bill is ready for calculation and transaction
+    """
+        Fetches Name and prize of products with end_point 
+    """
+    final_list = []
+    print(f"Cart instance fetched as : {cart_instance}")
+    cart_instance = eval(cart_instance)
     for item in cart_instance:
-        product = Product(item[o])  # critical : at 145 of DB_endpoint | Make id based initiation pathway in general object
+        detail = {"id":item[0]}
+        print(f"Details for product : {detail}")
+        product = Product(detail, end_point, anchor="id")
+        name = product.obj_information["name"]
+        prize = product.obj_information["prize"]
+        element = (name, prize, item[1])
+        final_list.append(element) # adding for final bill
+        del product
+    return final_list
+
+
+
 

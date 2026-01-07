@@ -14,6 +14,7 @@
     - Manage cart orders
 """
 from DB_endpoint import *
+from Product import *
 
 
 class User(General_obj):
@@ -30,7 +31,7 @@ class User(General_obj):
     3. Fetch user transactions from DB-endpoint - iNstance
     4. Make mechanism for final cart --> purchaase --> wallet update --> stock update
     '''
-    def __init__(self, user_details, end_point):
+    def __init__(self, user_details, end_point, search_anchor="id"):
         """
             user_details
             name : user_name
@@ -39,7 +40,8 @@ class User(General_obj):
 
         Purchase history is stored in different table for lookup
         """
-        super().__init__(user_details, end_point)
+        self.feilds = "name,password,wallet,cart".split(',')
+        super().__init__(user_details, end_point, feilds=self.feilds)
         # Initiate transaction endpoint to store the transactions and initiate products list for stock refle
 
     def cart_manager(self, option, data=""):
@@ -96,7 +98,7 @@ class User(General_obj):
 
             
 
-    def transaction_endpoint(self):
+    def transaction_endpoint(self, product_endpoint):
         """
             Initiating final cart transaction
         Update user wallet and run cascade of other operations
@@ -107,8 +109,9 @@ class User(General_obj):
         """
         final_transaction_list = []
         cart_instance = self.obj_information["cart"]
+
+        final_bill = make_bill(cart_instance, product_endpoint)
+        print(f"Final Bill generated {final_bill}")
+
         return None
-
-
-        
  
