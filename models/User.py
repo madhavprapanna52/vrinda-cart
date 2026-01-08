@@ -13,10 +13,10 @@
     - Transactions handeling via transaction object through wallet
     - Manage cart orders
 """
-from DB_endpoint import *
-from Product import *
-from Transaction import *
-
+from DB.endpoint import *
+from models.Product import *
+from models.Transaction import *
+from config import *
 
 class User(General_obj):
     '''

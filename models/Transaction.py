@@ -2,6 +2,9 @@
     Mini transaction DB connection unit for storing user history
 
 """
+from config import *
+
+
 def transaction_db(final_bill, user_id, db_endpoint):
     db_endpoint = db_endpoint
     final_dict = {

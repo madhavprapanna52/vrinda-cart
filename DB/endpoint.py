@@ -7,17 +7,9 @@
         - delete
 """
 import sqlite3
-import logging as log
+from config import *
 
-# Loging config
-log.basicConfig(
-    filename="app.log",      # file name
-    level=log.INFO,       # minimum level to record
-    format="%(asctime)s | %(levelname)s | %(message)s"
-)
-
-
-connection = sqlite3.connect("vrinda-cart.db")
+connection = sqlite3.connect("/home/madhav/Projects/vrinda-cart/DB/vrinda-cart.db")
 cursor = connection.cursor()
 
 # DB  Execution function
@@ -30,7 +22,6 @@ def execute_it(querry, output_required=0):
         cursor.execute(querry)
         connection.commit()
 
-# TODO testing require for modification operations , creation working
 class DB_object:
     """
         Makes db connection for the object to perform basic operations 

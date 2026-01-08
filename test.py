@@ -1,6 +1,6 @@
-from Product import *
-from DB_endpoint import *
-from User import *
+from models.Product import *
+from DB.endpoint import *
+from models.User import *
 
 
 product_detail = {

@@ -10,7 +10,8 @@
     - fetch product information for transaction
 
 """
-from DB_endpoint import *
+from DB.endpoint import *
+from config import *
 
 
 class Product(General_obj):
