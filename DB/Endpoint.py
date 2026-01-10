@@ -40,7 +40,6 @@ class Endpoint:
         # if result have one length its target search / mass search
         if len(result) == 1:
             result = result[0]
-        print(f"search information fetched as {result}")
         return result
 
 
@@ -65,10 +64,8 @@ class Endpoint:
         # Building final data insertion query
         query += f" {feilds} values {values}"
         self.execute(query)
-        print(f"Query for creating row : {query}")
 
         results = self.fetch_instance()
-        print(f"Results of creating row \n {results} \n")
 
     def edit(self, target_information, edit_information):
         """
@@ -92,7 +89,6 @@ class Endpoint:
         edit_query += f" where {target_column} = {target_value}"
 
         self.execute(edit_query)
-        print(f"Edits Executed results : {self.fetch_instance()}")
 
     def delete(self, target_id):
         query = f"delete from {self.table_name} where id = {target_id}"
