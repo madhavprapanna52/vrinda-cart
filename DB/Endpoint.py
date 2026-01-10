@@ -24,14 +24,10 @@ class Endpoint:
 
     def search(self, anchor_information, fetch_target="*"):
         """
-            Search information to search for product
-            anchor information format
-                anchor_colum : column name
-                anchor value : value for anchor
-            output : list of tuples for all sort of searches
+        anchor_information : (column, value)
         """
-        column = anchor_information["column"]
-        value = anchor_information["value"]
+        column = anchor_information[0]
+        value = anchor_information[1]
         # Validate search information : String type needs '' cover
 
         query = f"select {fetch_target} from {self.table_name} where"
@@ -41,6 +37,9 @@ class Endpoint:
             query += f" {column} = {value}"
 
         result = self.execute(query, 1) # fetch_result
+        # if result have one length its target search / mass search
+        if len(result) == 1:
+            result = result[0]
         print(f"search information fetched as {result}")
         return result
 
@@ -73,12 +72,12 @@ class Endpoint:
 
     def edit(self, target_information, edit_information):
         """
-            edit_information
-            colum : replacement data ..
-            target_information : target column , target value
+        Data flow 
+            target_information : (column, value)
+            edit_information : (column, value)
         """
-        column = edit_information["column"]
-        edit = edit_information["value"]
+        column = edit_information[0]
+        edit = edit_information[1]
         edit_query = f"update {self.table_name} set {column} = "
 
         if type(edit) == str:
@@ -87,8 +86,8 @@ class Endpoint:
             edit_query += f"{edit}"
 
         # seting target
-        target_column = target_information["column"]
-        target_value = target_information["value"]
+        target_column = target_information[0]
+        target_value = target_information[1]
 
         edit_query += f" where {target_column} = {target_value}"
 
