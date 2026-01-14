@@ -10,44 +10,53 @@
     Add products with user id into db for final transaction
     completes transaction
 """
-from DB.General_Object import *
 from models.Product import *
+from DB.Endpoint import *
 
 
-class Transaction(General_Object):
+class Transaction:
     """
-    # BUG Transaction object cant use general object due to low resources requriements
-        Information : Cart instance
-        dictionary with key as product name and value as quantity
+    Handles Transaction table and its informations
+
+    Input : cart instance
+    functions
+        init
+        > Computes the total bill
+        PAY
+        > Updates the stock of products and updates transaction db with product id and user id
     """
-    def __init__(self, information, transaction_endpoint, product_endpoint):
-        self.endpoint = transaction_endpoint
+    def __init__(self,cart_instance, transaction_endpoint, product_endpoint):
         self.product_endpoint = product_endpoint
-        # Fetch information about products
-        products = list(information.keys())
-        bill_list = []  # product_name, prize , stock required
-        total_bill = 0
-        for product in products:
-            product_object = self.init_product(product)  # product object
-            product_prize = int(product_object.information["prize"])
-            stock = int(information[product])  # stock information 
-            bill_element = (product, product_prize, stock)  # bill element
-            bill_list.append(bill_element)  # bill builds up 
-            total_bill += (product_prize * stock)
-            del product_object
-        self.bill_list = bill_list  # Final bill list for transaction
-        self.total_bill = total_bill  # total bill 
+        self.transaction_endpoint = transaction_endpoint
 
-    def product_endpoint(self):
-        for element in self.bill_list:
-            p = self.init_product(element[0])
-            stock_change = int(element[2])
-            p.stock(stock_change)  # stock update
+        # Compute bill
+        self.products = list(cart_instance.keys())
+        self.cart = cart_instance
+        total = 0
+        for product in self.products:
+            p = self.init_product(product)
+            prize = int(p.information["prize"])
+            stock = int(cart_instance[product])
+            total += (prize * stock)
+        self.total = total
 
-    def init_product(self, product_name):
-        info = ("name", product_name)
+    def endpoint(self, user_id):  # Working endpoint
+        """
+            Makes stock update in db and writes to transactions db
+        """
+        for product in self.products:
+            p = self.init_product(product)
+            demand = int(self.cart[product])
+            p.stock(-demand)
+            # DB Entry for given product_id and user_id
+            p_id = p.information["id"]
+            stock = self.cart[product]  # product information
+            information = {"product_id" : p_id, "stock" : stock, "customer_id" : user_id}
+            self.transaction_endpoint.create(information)  # final writeup
+
+
+    def init_product(self, name):
+        info = ("name", name)  # Product to initiate
         product = Product(info, self.product_endpoint)
-        return product
-
-
+        return product # product object
 
