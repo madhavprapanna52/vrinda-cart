@@ -2,6 +2,7 @@ from DB.General_Object import *
 from models.Product_refactored import *
 from models.Transaction import *
 from config import *
+import json
 
 
 class User(General_Object):
@@ -15,9 +16,13 @@ class User(General_Object):
         feilds = "id,name,password,wallet,cart".split(",")
         super().__init__(information, feilds, endpoint)
 
-    def cart(self, option, data):
-        cart = dict(self.information["cart"])
+    def cart(self, option, data):  # tested working
+        """
+            Making cart management system via data seriealization using json """
+        cart = self.information["cart"] # raw string from DB
+        cart = json.loads(cart)
         print(f"cart with empty state : {cart}")
+
         if option == 1: # Adding up to existing product quantity
             target_product = data[0]  # product
             for product in cart.keys():
@@ -34,15 +39,15 @@ class User(General_Object):
             for product in cart.keys():
                 if product == data[0]:
                     delete_target = product
-            del cart[delete_target]  # deleting required item
+            cart.pop(delete_target)
 
         else:
             print("Error")
             return 0
-        cart = str(cart)
+        # json based db load build
+        cart = json.dumps(cart)  # converts to db friendly
         print(f"Final cart instance for edit {cart}")
         update_cart = ("cart", cart)
         self.update(update_cart)
         return 1
-
 
