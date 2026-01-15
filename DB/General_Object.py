@@ -50,7 +50,7 @@ class General_Object:
         anchor = list(self.information.keys())[0]  # Must be Id 
         value = self.information[anchor]
         target = (anchor, value)
-
+        print(f"Calling endpoint for edits {edit_information}")
         self.endpoint.edit(target, edit_information)
         fetch = self.endpoint.search(target)  # returns one tuple
         # Re-initialize information

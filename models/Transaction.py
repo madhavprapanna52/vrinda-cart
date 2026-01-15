@@ -39,6 +39,7 @@ class Transaction:
             stock = int(cart_instance[product])
             total += (prize * stock)
         self.total = total
+        log.info(f"Total computed for transactions : {total}")
 
     def endpoint(self, user_id):  # Working endpoint
         """
@@ -52,6 +53,7 @@ class Transaction:
             p_id = p.information["id"]
             stock = self.cart[product]  # product information
             information = {"product_id" : p_id, "stock" : stock, "customer_id" : user_id}
+            log.info(f"Transaction updated for the information : {information}")
             self.transaction_endpoint.create(information)  # final writeup
 
 

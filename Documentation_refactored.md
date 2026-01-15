@@ -1,0 +1,36 @@
+# Endpoint Design
+
+Execution details
+
+DB_Endpoint
+  - Executing sql query
+  - fetching details
+  - serialization of data flow
+
+  Data flow and working contracts
+  
+  1. Search
+  {
+    "anchor_column" : "name",
+    "anchor_value" : "value"
+  }
+  requirement : for primary column based search only
+  return : fetched row with such constraints
+
+  Derived unit : filteration search : fetch multiple row 
+
+  2. Create
+  
+  row creation
+  Details_dictionary : As per table information
+  {
+    "column_name" : "values"...
+  }
+  fallback information
+   - returns error if all columns are not given
+   - If constraints fails -- fetch from DB output
+   - handeling DB level errors and log them
+  
+  Derived unit : Insert, Update
+
+  4. Table creation - Not included : Must via schema only

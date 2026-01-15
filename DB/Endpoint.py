@@ -87,7 +87,7 @@ class Endpoint:
         target_value = target_information[1]
 
         edit_query += f" where {target_column} = {target_value}"
-
+        print(f"Required inspection for final querry to load : {edit_query} ")
         self.execute(edit_query)
 
     def delete(self, target_id):

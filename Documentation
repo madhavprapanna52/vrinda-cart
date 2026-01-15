@@ -69,3 +69,10 @@ Feilds is being initiated with object details in general object thus fix it it t
 -------------------------------------
 CODE NOT TESTED WITH EDGE CASES
 last feature required -- > add transaction syncs with DB end to make persistent history of transaction and trace user history
+
+-------------------------------------
+
+Target last cleanup
+# Making backend clean up for frontend clean up
+# Make backend with three things, (status, payload, error)
+# Making Minimal frontend design for project
