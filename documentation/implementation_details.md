@@ -1,0 +1,78 @@
+
+Core Units
+	- Product 
+		variables = name, prize, stock,id (self_generating)
+		Methods
+			Update()
+				~ Name, prize, stock
+			
+
+	- Product Management
+		variables = Product objects list
+		Methods
+			Fetch products() - Product list
+			delete_product() - Product deleting request to db unit
+			fetch_product() - return product object -- edit with product object
+			edit_product() - Editing product
+
+	- DB unit
+	features - Consistency in Data base for Ensuring persistent storage of data
+
+	variables = transactions, Product list
+	methods
+		add_products
+		remove_product
+		update_product
+DB unit works with product manager to carry out operations
+
+## Testing and units development
+DB_Manager
+  - Working to make edits and DB modification
+  - Product Object
+      * Works at initiating product DB
+      * Connecting with DB to fetch Product for display
+      * Handles operations at Product level and manage dataset
+      * handeling dataset, Handeling modificaitons and updates
+
+------------------------------------------------------------- 
+Units development update : 30 december, 2025
+
+
+Objects working and usage documentation
+Product works with data dictionary
+  Dictionary -> { name : Laptop, prize : 1919, stock: 929}
+  Product.update(target_id, edit_list) makes edits of the product unit
+
+------------------------------ 
+
+CUREENT KNOWN TARGETS
+
+1. Make Product Object robust and connect well with DB for good communication -- Completed
+2. DB-integration | Product to manage its content and stocks -- Comleted
+3. User object integration --> Generalise DB-Manager for working with user and product | almost done
+4. Initiating Transaction DB for simplicity with completing Whole Backend | almost done -- one critical to solve 
+
+Critical || Make initiation pathway with id in general DB object to insure we make bill and complete transaction
+
+Back end almost completed with the above requirement of completing transaction final end point
+
+
++ make very simple working asthetic frontend
+
+
+-------------------------------------
+Issues and Problems to solve
+Feilds is being initiated with object details in general object thus fix it it take feilds as different
+	- Potential bugs and cascade , user and products initiation way have to be updated and update product initiation also
+  - Fixed bugs but needs refactorations
+
+-------------------------------------
+CODE NOT TESTED WITH EDGE CASES
+last feature required -- > add transaction syncs with DB end to make persistent history of transaction and trace user history
+
+-------------------------------------
+
+Target last cleanup
+# Making backend clean up for frontend clean up
+# Make backend with three things, (status, payload, error)
+# Making Minimal frontend design for project
