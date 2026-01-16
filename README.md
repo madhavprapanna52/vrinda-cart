@@ -1,15 +1,16 @@
 # Vrinda-cart
-Goal : An E-commerce platform for customers and sellers to list product and get end to end support for thier buisness to grow,
-vrinda-cart currently serves vrindavan local market and provides online platform for local market via our awesome service and platform
+Goal : Exploring web-dev via simple projects for hands on with edges and problems of making working product which is useful and could be implemented with model or scaled up solution.
 
 ## Project Overview
 
-user --> selects a product --> proceeds payment --> completes transactions
+user --> explores shops and products --> makes payment
+
 
 Technical overview
 + Used Multiple layers of abstractions and usefull reusable code at low level of DB endpoint to understand about CRUDE operations
 + tried to make generalised DB end point for future expansion of code for upgrade
 + Made foundational mechanism which is working on surface level testing
++ Making web-components based development for custom elements.
 
 Details of Project working
 
@@ -25,7 +26,7 @@ Scope of project and potential
 => Could be used to study real buisness with some testing to deploy on real world
 
 Future Targets
-1. Refactor code for more robust and optimized code for more reliable backend system
+1. Refactor code for more robust and optimized code for more reliable backend system [completed]
 2. Implement seamless , real world payment gateway and advanced security to inhance its responsibility in real world.
 3. Introduce custom sales man tailoured to user to recommend user items and drives sales via using smart models.
 4. Deploying project to real users and understand real buisness via local full scale driving model
