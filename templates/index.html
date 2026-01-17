@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VRINEX</title>
-    <link rel="stylesheet" href="css/index-style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index-style.css') }}">
 </head>
 <body>
 
         <div class="bar">
             <div class="logo">
-                <img src="/home/madhav/Projects/vrinda-cart/static/icons/LOGO.svg" alt="logo" height="120" weidth="120">
+        <img src="{{ url_for('static', filename='icons/LOGO.svg') }}" alt="logo" height="120" weidth="120">
             </div>
 
             <div class="nav-bar">
@@ -29,7 +29,7 @@
                 <p>Devoted to quality</p>
             </div> 
 
-            <img class="shop-icon" src="/home/madhav/Projects/vrinda-cart/static/icons/shop_icon.svg" alt="shop-icon">
+        <img class="shop-icon" src="{{ url_for('static', filename='icons/shop_icon.svg') }}" alt="shop-icon">
             
         </div>
 
@@ -45,7 +45,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact-items">
             <h2>CONTACT</h2>
             <p>
