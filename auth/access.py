@@ -1,28 +1,31 @@
-"""
-Simple sessions management system
-* Generate a unique auth key for access of services in website
-"""
-from itsdangerous import URLSafeTimedSerializer
-import time
+from datetime import datetime, timedelta
+from jose import jwt
+from jose import JWTError, ExpiredSignatureError
 
-# serret key
-secret_key = "secret"
-serializer = URLSafeTimedSerializer(secret_key)
+SECRET_KEY = "SHHH"
+ALGORITHM = "HS256"
 
-def generate_token(usr_id, expiration_time=2):
-    token_data = {"id" : usr_id}
-    token = serializer.dumps(token_data, salt='access-token-salt')
-    return token, expiration_time 
+class AuthError(Exception):
+    def __init__(self, error):
+        super().__init__(self, error)
 
-def token_verification(token, expiration_time=2):
+def create_auth_key(user_id: int) -> str:
+    """
+    Creates a authentication key with user id for access grant
+    """
+    payload = {
+        "sub": user_id,
+        "iat": datetime.utcnow(),
+        "exp": datetime.utcnow() + timedelta(seconds=10)
+    }
+    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
+    return token
+
+def verify_auth_key(token: str):
     try:
-        data = serializer.loads(
-            token,
-            salt='access-token-salt',
-            max_age = expiration_time
-        )
-        return data['id'] # returns id if valid
-    except (itsdangerous.SignatureExpired, itsdangerous.BadTimeSignature, itsdangerous.BadSignature) as e:
-        print("Token verification failed :)")
-        return None
-
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        return payload["sub"]
+    except Exception as e:
+        print(f"Error Occured as : {e}")
+    except:
+        print(f"Something is terrible here :(")
