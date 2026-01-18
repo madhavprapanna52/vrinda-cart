@@ -1,1 +1,4 @@
 Flask
+passlib
+argon2-cffi
+python-jose[cryptography]

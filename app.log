@@ -8,3 +8,27 @@
 2026-01-15 17:17:27,423 | INFO | Initiating Product Object : {'id': 1, 'name': 'Accer-Nitro-laptop', 'prize': 68000, 'stock': 100}
 2026-01-15 17:17:27,426 | INFO | Updating information : {'id': 1, 'name': 'Accer-Nitro-laptop', 'prize': 68000, 'stock': 99} with info -1
 2026-01-15 17:17:27,426 | INFO | Transaction updated for the information : {'product_id': 1, 'stock': 1, 'customer_id': 1}
+2026-01-17 16:08:29,853 | INFO | Initiating User with information : {self.information}
+2026-01-17 16:08:29,853 | INFO | User Registration completed with information : {'name': 'himanshu', 'password': '$argon2id$v=19$m=65536,t=3,p=4$w9jbG0NIaY0xBgAAAIAQIg$1gLUPj7CK65ULpAAbCWcPpphM1YfUijTvjeQ/qr3K/U', 'wallet': 10, 'cart': ''}
+2026-01-17 17:53:01,856 | INFO | Executing query for searching : select himanshu from users where n = 'a'
+2026-01-17 17:53:11,947 | INFO | Executing query for searching : select himanshu from users where n = 'a'
+2026-01-17 17:56:16,007 | INFO | Executing query for searching : select himanshu from users where n = 'a'
+2026-01-17 17:59:19,081 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:00:54,814 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:00:54,815 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:00:54,815 | INFO | Initiating User with information : {self.information}
+2026-01-17 18:01:21,863 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:01:21,864 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:01:21,864 | INFO | Initiating User with information : {self.information}
+2026-01-17 18:08:18,752 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:08:18,753 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:08:18,753 | INFO | Initiating User with information : {self.information}
+2026-01-17 18:15:41,765 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:15:41,766 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:15:41,766 | INFO | Initiating User with information : {self.information}
+2026-01-17 18:16:36,966 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:16:36,966 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:16:36,966 | INFO | Initiating User with information : {self.information}
+2026-01-17 18:17:05,007 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:17:05,008 | INFO | Executing query for searching : select * from users where name = 'himanshu'
+2026-01-17 18:17:05,008 | INFO | Initiating User with information : {self.information}
