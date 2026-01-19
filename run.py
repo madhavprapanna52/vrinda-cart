@@ -15,5 +15,9 @@ def show_products():
 def login():
     return render_template("login.html")  # could be used for registration also via jinja
 
+@app.route('/products')
+def products():
+    return render_template("products_page.html")
+
 if __name__ == '__main__':
     app.run(debug=True)

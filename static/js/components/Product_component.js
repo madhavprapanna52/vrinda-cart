@@ -19,6 +19,7 @@ class ProductComponent extends HTMLElement {
     // Edit template based on tags attributes
     const name = this.getAttribute('name') || "Product";
     const price = this.getAttribute('price') || "0.00";
+    // we can also add image and discription later
 
     this.shadowRoot.getElementById('title').textContent = name;
     this.shadowRoot.getElementById('price').textContent = price;

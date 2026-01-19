@@ -1,13 +1,51 @@
 <html>
 <head>
 	<title> Product Page </title>
-	<script src="static/js/components/ProductInfo.js"></script>
+    <script src="{{ url_for('static', filename='js/components/Product_component.js') }}"></script>
 
 </head>
 
 <body>
-	Testing product information thing
-	<product-info
-		name="mac-book"
-		prize="10">
-	</product-info>
+<template id="product-template">
+<style>
+img{
+    height : 4rem;
+    width : 3rem;
+}
+
+#product-card{
+    height : 12rem;
+    width : 12rem;
+    padding : 1%;
+    
+    border : 1px solid black;
+    
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction : column;
+}
+
+button{
+    border : none;
+    padding : 2%;
+}
+</style>
+
+<div id="product-card">
+        <h3 id="title"> Product Name</h3>
+        <img src="https://picsum.photos/200/300" alt="img" />
+        <p id="price">0.00</p>
+        <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i> Add to Cart
+        </button>
+    </div>
+</template>
+
+<product-card
+      name="Apple-book",
+      price="0.00">
+</product-card>
+
+</body>
+</html>
