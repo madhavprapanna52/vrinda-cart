@@ -1,7 +1,8 @@
 import sqlite3 as sql
 from config import *
 
-connection = sql.connect("/home/madhav/Projects/vrinda-cart/DB/vrinda-cart.db")
+connection = sql.connect("/home/madhav/Projects/vrinda-cart/DB/vrinda-cart.db", check_same_thread=False)  # FIX : Very temporary 
+
 cursor = connection.cursor()
 
 
