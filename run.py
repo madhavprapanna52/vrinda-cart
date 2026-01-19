@@ -1,23 +1,17 @@
+"""
+Main application interface
+    Implementing distributed blueprint based routing system
+    Handle core logic via using tools for making authentication and routing features
+"""
 from flask import Flask, render_template
-
+from products_page import products_page
 
 app = Flask(__name__)
+app.register_blueprint(products_page, url_prefix='/products')
 
-@app.route('/')
-def hello_world():
+@app.route("/")
+def landing_page():
     return render_template("index.html")
 
-@app.route('/products')
-def show_products():
-    return render_template("products_page.html")  # render Products page
-
-@app.route('/login')
-def login():
-    return render_template("login.html")  # could be used for registration also via jinja
-
-@app.route('/products')
-def products():
-    return render_template("products_page.html")
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)

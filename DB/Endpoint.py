@@ -45,12 +45,12 @@ class Endpoint:
         return result
 
 
-    def fetch_instance(self):  # tested
+    def fetch_instance(self, target_fetch="*"):  # tested
         """
             input : None
             output : rows affected
         """
-        query = f"select * from {self.table_name}"
+        query = f"select {target_fetch} from {self.table_name}"  # FIX : updated with target fetch for frontend presentation :<
         instance = self.execute(query, 1)
         return instance  # DB instance fetched
 

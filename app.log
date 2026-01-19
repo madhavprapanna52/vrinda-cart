@@ -32,3 +32,99 @@
 2026-01-17 18:17:05,007 | INFO | Executing query for searching : select * from users where name = 'himanshu'
 2026-01-17 18:17:05,008 | INFO | Executing query for searching : select * from users where name = 'himanshu'
 2026-01-17 18:17:05,008 | INFO | Initiating User with information : {self.information}
+2026-01-19 08:53:29,180 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 08:53:29,180 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 08:53:29,181 | INFO |  * Restarting with stat
+2026-01-19 08:53:29,410 | WARNING |  * Debugger is active!
+2026-01-19 08:53:29,517 | INFO |  * Debugger PIN: 120-768-986
+2026-01-19 08:53:50,532 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 08:53:50,532 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 08:53:50,533 | INFO |  * Restarting with stat
+2026-01-19 08:53:50,745 | WARNING |  * Debugger is active!
+2026-01-19 08:53:50,745 | INFO |  * Debugger PIN: 120-768-986
+2026-01-19 08:54:02,890 | INFO | 127.0.0.1 - - [19/Jan/2026 08:54:02] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-19 08:54:04,340 | INFO | 127.0.0.1 - - [19/Jan/2026 08:54:04] "[33mGET / HTTP/1.1[0m" 404 -
+2026-01-19 12:37:19,761 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 12:37:19,761 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 12:37:19,762 | INFO |  * Restarting with stat
+2026-01-19 12:37:19,988 | WARNING |  * Debugger is active!
+2026-01-19 12:37:19,988 | INFO |  * Debugger PIN: 767-506-265
+2026-01-19 12:39:59,690 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 12:39:59,690 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 12:39:59,691 | INFO |  * Restarting with stat
+2026-01-19 12:39:59,925 | WARNING |  * Debugger is active!
+2026-01-19 12:39:59,926 | INFO |  * Debugger PIN: 767-506-265
+2026-01-19 12:40:08,170 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:08] "GET / HTTP/1.1" 200 -
+2026-01-19 12:40:08,312 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:08] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-19 12:40:08,318 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:08] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-19 12:40:08,320 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:08] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-19 12:40:10,048 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:10] "GET / HTTP/1.1" 200 -
+2026-01-19 12:40:10,111 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:10] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-19 12:40:10,126 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:10] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-19 12:40:10,127 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:10] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-19 12:40:14,278 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:14] "[33mGET /127.1.0.0.5000/products/list HTTP/1.1[0m" 404 -
+2026-01-19 12:40:23,839 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:23] "[33mGET /127.1.0.0.5000/list HTTP/1.1[0m" 404 -
+2026-01-19 12:40:29,737 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:29] "GET / HTTP/1.1" 200 -
+2026-01-19 12:40:29,831 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:29] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-19 12:40:29,850 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:29] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-19 12:40:29,852 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:29] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-19 12:40:36,854 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:36] "[33mGET /products HTTP/1.1[0m" 404 -
+2026-01-19 12:40:40,303 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:40] "[33mGET /product HTTP/1.1[0m" 404 -
+2026-01-19 12:40:46,702 | INFO | 127.0.0.1 - - [19/Jan/2026 12:40:46] "[33mGET /products/listing HTTP/1.1[0m" 404 -
+2026-01-19 12:41:30,518 | INFO | 127.0.0.1 - - [19/Jan/2026 12:41:30] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:41:30,659 | INFO | 127.0.0.1 - - [19/Jan/2026 12:41:30] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 12:41:33,121 | INFO | 127.0.0.1 - - [19/Jan/2026 12:41:33] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:41:33,183 | INFO | 127.0.0.1 - - [19/Jan/2026 12:41:33] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 12:41:33,349 | INFO | 127.0.0.1 - - [19/Jan/2026 12:41:33] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:41:33,431 | INFO | 127.0.0.1 - - [19/Jan/2026 12:41:33] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 12:42:23,564 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/products_page.py', reloading
+2026-01-19 12:42:23,664 | INFO |  * Restarting with stat
+2026-01-19 12:43:45,516 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 12:43:45,516 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 12:43:45,517 | INFO |  * Restarting with stat
+2026-01-19 12:43:45,730 | WARNING |  * Debugger is active!
+2026-01-19 12:43:45,730 | INFO |  * Debugger PIN: 767-506-265
+2026-01-19 12:43:48,942 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:48] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:43:49,044 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:49] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 12:43:50,109 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:50] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:43:50,174 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:50] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 12:43:50,297 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:50] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:43:50,371 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:50] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 12:43:50,488 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:50] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:43:50,549 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:50] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 12:43:50,778 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:50] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:43:50,858 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:50] "GET /static/js/components/Product_component.js HTTP/1.1" 200 -
+2026-01-19 12:43:51,013 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:51] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:43:51,072 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:51] "GET /static/js/components/Product_component.js HTTP/1.1" 200 -
+2026-01-19 12:43:51,150 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:51] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:43:51,210 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:51] "GET /static/js/components/Product_component.js HTTP/1.1" 200 -
+2026-01-19 12:43:51,332 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:51] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:43:51,392 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:51] "GET /static/js/components/Product_component.js HTTP/1.1" 200 -
+2026-01-19 12:43:51,528 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-19 12:43:57,746 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:57] "GET / HTTP/1.1" 200 -
+2026-01-19 12:43:57,887 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:57] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-19 12:43:57,903 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:57] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-19 12:43:57,904 | INFO | 127.0.0.1 - - [19/Jan/2026 12:43:57] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-19 12:44:11,404 | INFO | 127.0.0.1 - - [19/Jan/2026 12:44:11] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:44:11,522 | INFO | 127.0.0.1 - - [19/Jan/2026 12:44:11] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 12:44:38,979 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/products_page.py', reloading
+2026-01-19 12:44:39,042 | INFO |  * Restarting with stat
+2026-01-19 12:44:39,294 | WARNING |  * Debugger is active!
+2026-01-19 12:44:39,294 | INFO |  * Debugger PIN: 767-506-265
+2026-01-19 12:44:41,413 | INFO | 127.0.0.1 - - [19/Jan/2026 12:44:41] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:44:41,491 | INFO | 127.0.0.1 - - [19/Jan/2026 12:44:41] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 12:44:50,454 | INFO | 127.0.0.1 - - [19/Jan/2026 12:44:50] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:44:50,517 | INFO | 127.0.0.1 - - [19/Jan/2026 12:44:50] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 12:45:17,716 | INFO | 127.0.0.1 - - [19/Jan/2026 12:45:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-01-19 12:45:30,460 | INFO | 127.0.0.1 - - [19/Jan/2026 12:45:30] "[33mGET /login HTTP/1.1[0m" 404 -
+2026-01-19 12:45:33,665 | INFO | 127.0.0.1 - - [19/Jan/2026 12:45:33] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 12:45:33,698 | INFO | 127.0.0.1 - - [19/Jan/2026 12:45:33] "GET /static/js/components/Product_component.js HTTP/1.1" 200 -
+2026-01-19 12:46:11,734 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/products_page.py', reloading
+2026-01-19 12:46:11,808 | INFO |  * Restarting with stat
+2026-01-19 12:46:12,028 | WARNING |  * Debugger is active!
+2026-01-19 12:46:12,029 | INFO |  * Debugger PIN: 767-506-265

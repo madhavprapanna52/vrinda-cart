@@ -6,6 +6,8 @@
 </head>
 
 <body>
+
+<!-- Template for Product component -->
 <template id="product-template">
 <style>
 img{
@@ -42,10 +44,21 @@ button{
     </div>
 </template>
 
-<product-card
-      name="Apple-book",
-      price="0.00">
-</product-card>
+
+<!-- Product Listing page -->
+<h3> Products </h3>
+
+  <div id="Product_listing_box">
+
+      {% for elem in product_list %}
+      <product-card
+        name={{ elem[0] }},
+        price={{ elem[1] }}
+        >
+      </product-card>
+      {% endfor %}
+
+  </div>
 
 </body>
 </html>
