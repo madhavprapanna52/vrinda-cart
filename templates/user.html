@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ information["name"] }}</title>
+    <link href="{{ url_for('static', filename='css/style_user.css') }}" rel="stylesheet">
+  </head>
+  <body>
 
+    <div id="user-section">
+      <div id="user-info">
+        <img src="{{ url_for('static', filename=information['image']) }}" alt="user_image">
+        <h2>{{ information["name"] }}</h2>
+      </div>
+      
+      <div id="content-box">
+
+        <div class="usr-content" id="cart-box">
+          <h3>Cart</h3>
+          {% for product in information["cart"] %}
+          <div id="product" class="content-block">
+            <p>{{ product }}</p>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="usr-content" id="order-history">
+          <h3>Orders</h3>
+          {% for order in information['order'] %}
+          <div id="order" colum="content-block">
+            <p>{{ order }}</p>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+
+
+    <button onclick="handle_payment()">Buy</button>
+    </div>
+  
+  </body>
+</html>
