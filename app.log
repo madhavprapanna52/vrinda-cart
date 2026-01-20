@@ -63,3 +63,258 @@
 2026-01-19 15:14:03,537 | INFO | Executing query for searching : select * from users where name = 'mad'
 2026-01-19 15:14:03,537 | INFO | Initiating User with information : {self.information}
 2026-01-19 15:14:03,670 | INFO | 127.0.0.1 - - [19/Jan/2026 15:14:03] "POST /login/ HTTP/1.1" 200 -
+2026-01-19 15:15:48,027 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 15:15:48,027 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 15:15:48,028 | INFO |  * Restarting with stat
+2026-01-19 15:15:48,248 | WARNING |  * Debugger is active!
+2026-01-19 15:15:48,248 | INFO |  * Debugger PIN: 959-309-261
+2026-01-19 15:15:52,703 | INFO | 127.0.0.1 - - [19/Jan/2026 15:15:52] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 15:15:52,803 | INFO | 127.0.0.1 - - [19/Jan/2026 15:15:52] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-19 15:15:54,945 | INFO | 127.0.0.1 - - [19/Jan/2026 15:15:54] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-19 15:15:54,974 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-19 15:15:54,974 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-19 15:15:54,975 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-19 15:15:54,975 | INFO | Initiating User with information : {self.information}
+2026-01-19 15:15:55,113 | INFO | 127.0.0.1 - - [19/Jan/2026 15:15:55] "POST /login/ HTTP/1.1" 200 -
+2026-01-19 15:16:02,365 | INFO | 127.0.0.1 - - [19/Jan/2026 15:16:02] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 15:16:02,477 | INFO | 127.0.0.1 - - [19/Jan/2026 15:16:02] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 15:20:09,171 | INFO | Executing query for searching : select * from products where name = 'Mac-book'
+2026-01-19 15:20:09,171 | INFO | Initiating Product Object : {'id': 1, 'name': 'Mac-book', 'prize': 100000, 'stock': 10}
+2026-01-19 15:20:09,174 | INFO | Executing query for searching : select * from products where name = 'Rolls-Royce'
+2026-01-19 15:20:09,174 | INFO | Initiating Product Object : {'id': 2, 'name': 'Rolls-Royce', 'prize': 1000000, 'stock': 10}
+2026-01-19 15:20:38,768 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 15:20:38,768 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 15:20:38,769 | INFO |  * Restarting with stat
+2026-01-19 15:20:38,985 | WARNING |  * Debugger is active!
+2026-01-19 15:20:38,985 | INFO |  * Debugger PIN: 402-596-071
+2026-01-19 15:20:40,446 | INFO | 127.0.0.1 - - [19/Jan/2026 15:20:40] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 15:20:40,526 | INFO | 127.0.0.1 - - [19/Jan/2026 15:20:40] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 15:22:14,214 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 15:22:14,214 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 15:22:14,215 | INFO |  * Restarting with stat
+2026-01-19 15:22:14,421 | WARNING |  * Debugger is active!
+2026-01-19 15:22:14,422 | INFO |  * Debugger PIN: 959-309-261
+2026-01-19 15:22:26,888 | INFO | 127.0.0.1 - - [19/Jan/2026 15:22:26] "GET / HTTP/1.1" 200 -
+2026-01-19 15:22:27,024 | INFO | 127.0.0.1 - - [19/Jan/2026 15:22:27] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-19 15:22:27,035 | INFO | 127.0.0.1 - - [19/Jan/2026 15:22:27] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-19 15:22:27,039 | INFO | 127.0.0.1 - - [19/Jan/2026 15:22:27] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-19 15:22:49,862 | INFO | 127.0.0.1 - - [19/Jan/2026 15:22:49] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 15:22:49,980 | INFO | 127.0.0.1 - - [19/Jan/2026 15:22:49] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-19 15:23:02,803 | INFO | 127.0.0.1 - - [19/Jan/2026 15:23:02] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-19 15:23:02,835 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-19 15:23:02,836 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-19 15:23:02,836 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-19 15:23:02,836 | INFO | Initiating User with information : {self.information}
+2026-01-19 15:23:02,995 | INFO | 127.0.0.1 - - [19/Jan/2026 15:23:02] "POST /login/ HTTP/1.1" 200 -
+2026-01-19 15:23:17,882 | INFO | 127.0.0.1 - - [19/Jan/2026 15:23:17] "[33mGET /products/ HTTP/1.1[0m" 404 -
+2026-01-19 15:23:25,386 | INFO | 127.0.0.1 - - [19/Jan/2026 15:23:25] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 15:23:25,489 | INFO | 127.0.0.1 - - [19/Jan/2026 15:23:25] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 15:34:14,917 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 15:34:14,917 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 15:34:14,918 | INFO |  * Restarting with stat
+2026-01-19 15:34:15,224 | WARNING |  * Debugger is active!
+2026-01-19 15:34:15,225 | INFO |  * Debugger PIN: 215-413-012
+2026-01-19 15:34:22,667 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:22] "GET / HTTP/1.1" 200 -
+2026-01-19 15:34:22,804 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:22] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-19 15:34:22,813 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:22] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-19 15:34:22,815 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:22] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-19 15:34:33,837 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:33] "GET / HTTP/1.1" 200 -
+2026-01-19 15:34:33,944 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:33] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-19 15:34:33,954 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:33] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-19 15:34:33,956 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:33] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-19 15:34:38,448 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:38] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 15:34:38,559 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:38] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-19 15:34:44,741 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:44] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-19 15:34:44,765 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-19 15:34:44,765 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-19 15:34:44,765 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-19 15:34:44,766 | INFO | Initiating User with information : {self.information}
+2026-01-19 15:34:44,896 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:44] "POST /login/ HTTP/1.1" 200 -
+2026-01-19 15:34:55,864 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:55] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 15:34:55,994 | INFO | 127.0.0.1 - - [19/Jan/2026 15:34:55] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 18:49:25,102 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 18:49:25,102 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 18:49:25,103 | INFO |  * Restarting with stat
+2026-01-19 18:49:25,313 | WARNING |  * Debugger is active!
+2026-01-19 18:49:25,313 | INFO |  * Debugger PIN: 553-063-266
+2026-01-19 18:49:36,235 | INFO | 127.0.0.1 - - [19/Jan/2026 18:49:36] "GET / HTTP/1.1" 200 -
+2026-01-19 18:49:36,390 | INFO | 127.0.0.1 - - [19/Jan/2026 18:49:36] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-19 18:49:36,397 | INFO | 127.0.0.1 - - [19/Jan/2026 18:49:36] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-19 18:49:36,399 | INFO | 127.0.0.1 - - [19/Jan/2026 18:49:36] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-19 18:49:55,400 | INFO | 127.0.0.1 - - [19/Jan/2026 18:49:55] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 18:49:55,512 | INFO | 127.0.0.1 - - [19/Jan/2026 18:49:55] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-19 18:50:02,666 | INFO | 127.0.0.1 - - [19/Jan/2026 18:50:02] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-19 18:50:02,692 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-19 18:50:02,692 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-19 18:50:02,693 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-19 18:50:02,693 | INFO | Initiating User with information : {self.information}
+2026-01-19 18:50:02,830 | INFO | 127.0.0.1 - - [19/Jan/2026 18:50:02] "POST /login/ HTTP/1.1" 200 -
+2026-01-19 18:50:53,623 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 18:50:53,623 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 18:50:53,624 | INFO |  * Restarting with stat
+2026-01-19 18:50:53,820 | WARNING |  * Debugger is active!
+2026-01-19 18:50:53,820 | INFO |  * Debugger PIN: 553-063-266
+2026-01-19 18:50:55,601 | INFO | 127.0.0.1 - - [19/Jan/2026 18:50:55] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 18:50:55,695 | INFO | 127.0.0.1 - - [19/Jan/2026 18:50:55] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-19 18:54:31,422 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 18:54:31,422 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 18:54:31,423 | INFO |  * Restarting with stat
+2026-01-19 18:54:31,617 | WARNING |  * Debugger is active!
+2026-01-19 18:54:31,618 | INFO |  * Debugger PIN: 553-063-266
+2026-01-19 18:54:32,711 | INFO | 127.0.0.1 - - [19/Jan/2026 18:54:32] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 18:54:32,822 | INFO | 127.0.0.1 - - [19/Jan/2026 18:54:32] "GET /static/css/login-style.css HTTP/1.1" 200 -
+2026-01-19 18:56:38,253 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 18:56:38,253 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 18:56:38,254 | INFO |  * Restarting with stat
+2026-01-19 18:56:38,461 | WARNING |  * Debugger is active!
+2026-01-19 18:56:38,461 | INFO |  * Debugger PIN: 141-759-807
+2026-01-19 18:56:44,289 | INFO | 127.0.0.1 - - [19/Jan/2026 18:56:44] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 18:56:44,397 | INFO | 127.0.0.1 - - [19/Jan/2026 18:56:44] "GET /static/css/login-style.css HTTP/1.1" 200 -
+2026-01-19 18:56:44,620 | INFO | 127.0.0.1 - - [19/Jan/2026 18:56:44] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 18:56:44,727 | INFO | 127.0.0.1 - - [19/Jan/2026 18:56:44] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-19 18:57:21,764 | INFO | 127.0.0.1 - - [19/Jan/2026 18:57:21] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 18:57:21,847 | INFO | 127.0.0.1 - - [19/Jan/2026 18:57:21] "GET /static/css/login-style.css HTTP/1.1" 200 -
+2026-01-19 18:57:44,428 | INFO | 127.0.0.1 - - [19/Jan/2026 18:57:44] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 18:57:44,494 | INFO | 127.0.0.1 - - [19/Jan/2026 18:57:44] "GET /static/css/login-style.css HTTP/1.1" 200 -
+2026-01-19 18:57:44,876 | INFO | 127.0.0.1 - - [19/Jan/2026 18:57:44] "GET /login/ HTTP/1.1" 200 -
+2026-01-19 18:57:44,948 | INFO | 127.0.0.1 - - [19/Jan/2026 18:57:44] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-19 19:00:33,718 | INFO | 127.0.0.1 - - [19/Jan/2026 19:00:33] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-19 19:00:33,753 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-19 19:00:33,754 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-19 19:00:33,754 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-19 19:00:33,754 | INFO | Initiating User with information : {self.information}
+2026-01-19 19:00:33,925 | INFO | 127.0.0.1 - - [19/Jan/2026 19:00:33] "POST /login/ HTTP/1.1" 200 -
+2026-01-19 19:00:45,310 | INFO | 127.0.0.1 - - [19/Jan/2026 19:00:45] "[33mGET /register HTTP/1.1[0m" 404 -
+2026-01-19 19:02:46,610 | INFO | 127.0.0.1 - - [19/Jan/2026 19:02:46] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 19:02:46,739 | INFO | 127.0.0.1 - - [19/Jan/2026 19:02:46] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 19:02:48,987 | INFO | 127.0.0.1 - - [19/Jan/2026 19:02:48] "GET /products/list HTTP/1.1" 200 -
+2026-01-19 19:02:49,056 | INFO | 127.0.0.1 - - [19/Jan/2026 19:02:49] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 19:05:30,562 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-19 19:05:30,562 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-19 19:05:30,564 | INFO |  * Restarting with stat
+2026-01-19 19:05:30,793 | WARNING |  * Debugger is active!
+2026-01-19 19:05:30,794 | INFO |  * Debugger PIN: 142-341-805
+2026-01-19 19:05:31,868 | INFO | 127.0.0.1 - - [19/Jan/2026 19:05:31] "GET /products/ HTTP/1.1" 200 -
+2026-01-19 19:05:31,974 | INFO | 127.0.0.1 - - [19/Jan/2026 19:05:31] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-19 19:07:14,740 | INFO | 127.0.0.1 - - [19/Jan/2026 19:07:14] "GET / HTTP/1.1" 200 -
+2026-01-19 19:07:14,921 | INFO | 127.0.0.1 - - [19/Jan/2026 19:07:14] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-19 19:07:14,939 | INFO | 127.0.0.1 - - [19/Jan/2026 19:07:14] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-19 19:07:14,942 | INFO | 127.0.0.1 - - [19/Jan/2026 19:07:14] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-19 19:08:40,883 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/products_page.py', reloading
+2026-01-19 19:08:40,932 | INFO |  * Restarting with stat
+2026-01-19 19:08:41,162 | WARNING |  * Debugger is active!
+2026-01-19 19:08:41,162 | INFO |  * Debugger PIN: 142-341-805
+2026-01-19 19:57:40,996 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/products_page.py', reloading
+2026-01-19 19:57:41,023 | INFO |  * Restarting with stat
+2026-01-19 19:57:41,118 | WARNING |  * Debugger is active!
+2026-01-19 19:57:41,119 | INFO |  * Debugger PIN: 142-341-805
+2026-01-20 06:48:14,276 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-20 06:48:14,276 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-20 06:48:14,277 | INFO |  * Restarting with stat
+2026-01-20 06:48:14,505 | WARNING |  * Debugger is active!
+2026-01-20 06:48:14,616 | INFO |  * Debugger PIN: 108-863-981
+2026-01-20 06:48:22,478 | INFO | 127.0.0.1 - - [20/Jan/2026 06:48:22] "GET / HTTP/1.1" 200 -
+2026-01-20 06:48:22,631 | INFO | 127.0.0.1 - - [20/Jan/2026 06:48:22] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-20 06:48:22,636 | INFO | 127.0.0.1 - - [20/Jan/2026 06:48:22] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-20 06:48:22,638 | INFO | 127.0.0.1 - - [20/Jan/2026 06:48:22] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-20 06:48:36,279 | INFO | 127.0.0.1 - - [20/Jan/2026 06:48:36] "GET /products/ HTTP/1.1" 200 -
+2026-01-20 06:48:36,382 | INFO | 127.0.0.1 - - [20/Jan/2026 06:48:36] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-20 06:48:46,327 | INFO | 127.0.0.1 - - [20/Jan/2026 06:48:46] "GET /login/ HTTP/1.1" 200 -
+2026-01-20 06:48:46,424 | INFO | 127.0.0.1 - - [20/Jan/2026 06:48:46] "GET /static/css/login-style.css HTTP/1.1" 200 -
+2026-01-20 06:49:05,268 | INFO | 127.0.0.1 - - [20/Jan/2026 06:49:05] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-20 06:49:05,331 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 06:49:05,332 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-20 06:49:05,332 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 06:49:05,332 | INFO | Initiating User with information : {self.information}
+2026-01-20 06:49:05,460 | INFO | 127.0.0.1 - - [20/Jan/2026 06:49:05] "POST /login/ HTTP/1.1" 200 -
+2026-01-20 07:07:22,870 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-20 07:07:22,871 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-20 07:07:22,872 | INFO |  * Restarting with stat
+2026-01-20 07:07:23,141 | WARNING |  * Debugger is active!
+2026-01-20 07:07:23,143 | INFO |  * Debugger PIN: 764-388-474
+2026-01-20 07:07:26,722 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:26] "GET / HTTP/1.1" 200 -
+2026-01-20 07:07:26,893 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:26] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-20 07:07:26,899 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:26] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-20 07:07:26,902 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:26] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-20 07:07:37,170 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:37] "GET /login/ HTTP/1.1" 200 -
+2026-01-20 07:07:37,263 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:37] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-20 07:07:42,129 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:42] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-20 07:07:42,150 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:07:42,151 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-20 07:07:42,151 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:07:42,151 | INFO | Initiating User with information : {self.information}
+2026-01-20 07:07:42,281 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:42] "POST /login/ HTTP/1.1" 200 -
+2026-01-20 07:07:43,442 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:43] "GET /login/ HTTP/1.1" 200 -
+2026-01-20 07:07:45,367 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:45] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-20 07:07:45,392 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:07:45,392 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-20 07:07:45,392 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:07:45,393 | INFO | Initiating User with information : {self.information}
+2026-01-20 07:07:45,515 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:45] "POST /login/ HTTP/1.1" 200 -
+2026-01-20 07:07:47,235 | INFO | 127.0.0.1 - - [20/Jan/2026 07:07:47] "GET /login/ HTTP/1.1" 200 -
+2026-01-20 07:09:41,971 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/login_route.py', reloading
+2026-01-20 07:09:42,038 | INFO |  * Restarting with stat
+2026-01-20 07:09:42,322 | WARNING |  * Debugger is active!
+2026-01-20 07:09:42,323 | INFO |  * Debugger PIN: 764-388-474
+2026-01-20 07:10:02,438 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/login_route.py', reloading
+2026-01-20 07:10:02,503 | INFO |  * Restarting with stat
+2026-01-20 07:10:02,764 | WARNING |  * Debugger is active!
+2026-01-20 07:10:02,764 | INFO |  * Debugger PIN: 764-388-474
+2026-01-20 07:10:03,108 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:03] "GET /login/ HTTP/1.1" 200 -
+2026-01-20 07:10:03,206 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:03] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-20 07:10:05,909 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:05] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-20 07:10:05,935 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:10:05,935 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-20 07:10:05,936 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:10:05,936 | INFO | Initiating User with information : {self.information}
+2026-01-20 07:10:06,075 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:06] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-20 07:10:06,153 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:06] "[36mGET /login/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-01-20 07:10:06,155 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:06] "[36mGET /login/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-01-20 07:10:06,205 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:06] "GET /login/?__debugger__=yes&cmd=resource&f=console.png&s=TdYsO9QcIFcRimkbz2U9 HTTP/1.1" 200 -
+2026-01-20 07:10:28,920 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/login_route.py', reloading
+2026-01-20 07:10:28,986 | INFO |  * Restarting with stat
+2026-01-20 07:10:29,399 | WARNING |  * Debugger is active!
+2026-01-20 07:10:29,400 | INFO |  * Debugger PIN: 764-388-474
+2026-01-20 07:10:29,914 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:29] "GET /login/ HTTP/1.1" 200 -
+2026-01-20 07:10:29,990 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:29] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-20 07:10:32,121 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:32] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-20 07:10:32,148 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:10:32,149 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-20 07:10:32,149 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:10:32,149 | INFO | Initiating User with information : {self.information}
+2026-01-20 07:10:32,277 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:10:32,277 | INFO | Initiating User with information : {self.information}
+2026-01-20 07:10:32,277 | INFO | 127.0.0.1 - - [20/Jan/2026 07:10:32] "POST /login/ HTTP/1.1" 200 -
+2026-01-20 07:11:17,701 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/login_route.py', reloading
+2026-01-20 07:11:17,773 | INFO |  * Restarting with stat
+2026-01-20 07:11:18,039 | WARNING |  * Debugger is active!
+2026-01-20 07:11:18,040 | INFO |  * Debugger PIN: 764-388-474
+2026-01-20 07:11:18,821 | INFO | 127.0.0.1 - - [20/Jan/2026 07:11:18] "GET /login/ HTTP/1.1" 200 -
+2026-01-20 07:11:18,903 | INFO | 127.0.0.1 - - [20/Jan/2026 07:11:18] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-20 07:11:20,866 | INFO | 127.0.0.1 - - [20/Jan/2026 07:11:20] "[32mPOST /login HTTP/1.1[0m" 308 -
+2026-01-20 07:11:20,893 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:11:20,893 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '')
+2026-01-20 07:11:20,893 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:11:20,893 | INFO | Initiating User with information : {self.information}
+2026-01-20 07:11:21,031 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-20 07:11:21,031 | INFO | Initiating User with information : {self.information}
+2026-01-20 07:11:21,038 | INFO | 127.0.0.1 - - [20/Jan/2026 07:11:21] "POST /login/ HTTP/1.1" 200 -
+2026-01-20 07:13:36,920 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/login_route.py', reloading
+2026-01-20 07:13:36,996 | INFO |  * Restarting with stat
+2026-01-20 07:13:37,280 | WARNING |  * Debugger is active!
+2026-01-20 07:13:37,280 | INFO |  * Debugger PIN: 764-388-474
+2026-01-20 07:15:20,896 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/products_page.py', reloading
+2026-01-20 07:15:20,975 | INFO |  * Restarting with stat
+2026-01-20 07:15:21,285 | WARNING |  * Debugger is active!
+2026-01-20 07:15:21,286 | INFO |  * Debugger PIN: 764-388-474

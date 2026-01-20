@@ -16,7 +16,7 @@ from DB.General_Object import *
 class Product(General_Object):
 
     def __init__(self, information, endpoint):
-        feilds = 'id,name,prize,stock'.split(',')
+        feilds = 'id,name,price,stock'.split(',')
         super().__init__(information, feilds, endpoint)
         log.info(f"Initiating Product Object : {self.information}")
 

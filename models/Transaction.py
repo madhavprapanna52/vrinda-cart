@@ -35,9 +35,9 @@ class Transaction:
         total = 0
         for product in self.products:
             p = self.init_product(product)
-            prize = int(p.information["prize"])
+            price = int(p.information["prize"])
             stock = int(cart_instance[product])
-            total += (prize * stock)
+            total += (price * stock)
         self.total = total
         log.info(f"Total computed for transactions : {total}")
 

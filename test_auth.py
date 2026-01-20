@@ -1,8 +1,6 @@
-from auth.login import *
-from models.User import *
-from DB.Endpoint import *
+from auth.access import *
+import time 
 
-usr = Endpoint("users")
 
 log_info = {
     "name" : "mad",
@@ -10,10 +8,11 @@ log_info = {
     "wallet" : 10,
     "cart" : ""
 }
+access = create_auth_key("2")
+print(f"Authentication id made with : {access} ")
 
-registration(log_info, usr)
-print("user registered for testing")
+# verification unit
+time.sleep(11)
+verification  = verify_auth_key(str(access))
+print(f"Verfication unit output : {verification}")
 
-i = {"name" : "mad", "password" : "1234"}
-r = authentication(i, usr)
-print("Authentication he he results ", r)

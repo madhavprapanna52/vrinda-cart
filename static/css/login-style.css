@@ -5,6 +5,7 @@
 body{
   display : flex;
   justify-content : center;
+  background-color : black;
   align-items : center;
   min-height : 100vh;
   margin : 0;
@@ -20,7 +21,7 @@ body{
   display : flex;
   justify-content : center;
   align-items : center;
-  background-color : #e0f5ff;
+  background-color : white;
 }
 
 .input-section{
@@ -42,5 +43,6 @@ body{
 #button-elem{
   height : 2rem;
   width : 5rem;
-  background-color : #f9ffe2;
+  color : black;
+  background-color : yellow;
 }
