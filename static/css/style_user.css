@@ -6,7 +6,7 @@
 body{
   height:100vh;
   width:100%;
-  background-color : #536B78;
+  background-color : black;
   border : 1px solid black;
   display: flex;
   align-items : center;
@@ -19,16 +19,16 @@ body{
   justify-content : space-around;
   align-items :center;
   flex-direction : column;
-  background-color : #637081;
+  background-color : hsl(0, 0%, 70%);
 
   height : 40rem;
   width : 60rem;
-  border-radius : 2%;
+  border-radius : 5px;
   padding : 3%;
 }
 
 #user-info{
-  background-color : #7C98B3;
+  background-color : hsl(0, 0%, 90%);
   height : 13rem;
   padding : 2%;
   display : flex;
@@ -40,7 +40,7 @@ body{
 }
 
 #content-box{
-  background-color : #CEE5F2;
+  background-color : hsl(0, 0%, 85%);
   width : 75%;
   height : 50%;
 
@@ -63,10 +63,12 @@ button{
   padding : 1%;
   border : none;
   border-radius: 5%;
-  background-color : #CEE5F2;
+  height : 2rem;
+  width : 5rem;
+  background-color :yellow;
 }
 img{
   height : 6rem;
   width : 6rem;
-  border-radius : 50%;
+  border-radius :5px;
 }
