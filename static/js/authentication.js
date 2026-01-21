@@ -1,36 +1,33 @@
-async function loginUser(username, password) {
+// Simple Authentication Flow
 
-  const response = await fetch('/login', {
-    'Content-type' : 'application/json' },
-    body:
-    JSON.stringify({"username": username, "password" : password})
-  });
+const form = document.getElementById("loginForm");
+const error = document.getElementById("error");
 
-  if (response.ok) {
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  try{
+    const response = await fetch("http://127.0.0.1:5000/login/",{
+      method : "POST",
+      headers : {
+        "Content-Type" : "application/json"
+      },
+      body : JSON.stringify({username : username, password : password})
+    });
+
+    if (!response.ok){
+      throw new Error("Invalid Credentials");
+    }
     const data = await response.json();
-    // Save the token for future responses
-    localStorage.setItem('access_token', data.access_token);
-    console.log("Login Successfull");
-  } else{
-    alert("Login Failed")
+
+    // store token
+    localStorage.setItem("access_token", data.access_token);
+
+    window.location.href = "/user";
+  } catch (error) {
+    error.innerText = error.message;
   }
-  
-}
-
-// TODO : Broken login routing and js urgent fix required :)
-
-const loginFrom = document.querySelector('#login-form');
-
-loginForm.addEventListener('submit', aysync (e) => {
-  preventDefault(); // Stop refresh
-
-  alert("Working Button with js");
-  
-  const username = document.querySelector('#username').value;
-  const password = docuemnt.querySelector('#password').value;
-
-  // using login function
-  await loginUser(username, password);
-  console.log("Something working he he ");
-
-})
+});
