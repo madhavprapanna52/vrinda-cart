@@ -19,8 +19,4 @@ print(f"Product list : {product_list}")
 @products_page.route('/', methods=['GET'])
 def products():
     if request.method == "GET":
-        return render_template("products_page.html", product_list=product_list)
-
-
-
-
+        return render_template("products.html", product_list=product_list)

@@ -5,9 +5,11 @@ Main application interface
 """
 from flask import Flask, render_template
 from products_page import products_page
+from user_api import user_page
 from login_route import login_page
 
 app = Flask(__name__)
+app.register_blueprint(user_page, url_prefix='/user')
 app.register_blueprint(products_page, url_prefix='/products')
 app.register_blueprint(login_page, url_prefix="/login")
 
@@ -15,6 +17,7 @@ app.register_blueprint(login_page, url_prefix="/login")
 @app.route("/")
 def landing_page():
     return render_template("index.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

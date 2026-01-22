@@ -16,11 +16,12 @@ class User(General_Object):
         feilds = "id,name,password,wallet,cart".split(",")
         super().__init__(information, feilds, endpoint)
         log.info("Initiating User with information : {self.information}")
-
+    # TODO : Update DB via sqlite3 console for making {} in cart string for this json part to work
     def cart(self, option, data):  # tested working
         """
             Making cart management system via data seriealization using json """
         cart = self.information["cart"] # raw string from DB
+        print(f"cat information from frontend : {cart}")
         cart = json.loads(cart)
 
         if option == 1: # Adding up to existing product quantity

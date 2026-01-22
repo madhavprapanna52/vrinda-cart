@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="login-container">
-      <form action="/login" method="POST">
+      <form id="loginForm">
         <div id="user-name-section" class="input-section">
 
         <label for="username">USERNAME</label>
@@ -29,6 +29,12 @@
         <a href="/register"> register </a>
         </div>
       </form>
+
+
+      <p id="error"></p>
+
+      <script src="{{ url_for('static', filename='js/authentication.js') }}">
+      </script>
 
     </div>
   </body>

@@ -20,12 +20,13 @@ img{
     width : 12rem;
     padding : 1%;
     
-    border : 1px solid black;
+    border : 2px solid black;
     
     display : flex;
     justify-content: center;
     align-items: center;
     flex-direction : column;
+    border-radius : 10px;
 }
 
 button{
@@ -38,27 +39,17 @@ button{
         <h3 id="title"> Product Name</h3>
         <img src="https://picsum.photos/200/300" alt="img" />
         <p id="price">0.00</p>
-        <button class="add-to-cart-btn">
-            <i class="fas fa-shopping-cart"></i> Add to Cart
+        <button id="add-to-cart">
+            Add to Cart
         </button>
-    </div>
+</div>
 </template>
-
-
-<!-- Product Listing page -->
-<h3> Products </h3>
-
-  <div id="Product_listing_box">
-
-      {% for elem in product_list %}
       <product-card
-        name={{ elem[0] }},
-        price={{ elem[1] }}
-        >
+        name="Gokul",
+        price="101",
+        id="product-element"
+      >
       </product-card>
-      {% endfor %}
-
-  </div>
 
 </body>
 </html>

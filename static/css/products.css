@@ -1,0 +1,58 @@
+*{
+  margin : 0;
+  padding : 0;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  padding-top : 4%;
+  justify-content : space-around;
+  gap : 1.5rem;
+  flex-direction : column;
+}
+
+#main-bar{
+  background-color : hsl(0, 0%, 85%);
+  height : 5rem;
+  width : 80%;
+  border-radius : 5px;
+  display : flex;
+  align-items:center;
+  justify-content: space-around;
+}
+
+#nav-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height : 3rem;
+  width : 15rem;
+  background-color : hsl(0, 0%, 95%);
+  border-radius : 3px;
+}
+#nav-bar a{
+  text-decoration : none;
+  font-weight : lighter;
+  color : hsl(0, 0%, 10%);
+}
+
+#listing-box{
+
+  display : grid;
+  grid-template-columns : repeat(auto-fill, minmax(15rem, 1fr));
+  padding : 2rem;
+
+  background-color : hsl(0, 0%, 90%);
+  height : 45rem;
+  width : 80%;
+  border-radius : 10px;
+}
+
+#account-info{
+  background-color : hsl(0,0%,95%);
+  height : 3rem;
+  width : 3rem;
+  border-radius : 5px;
+}
+

@@ -23,8 +23,77 @@ class ProductComponent extends HTMLElement {
 
     this.shadowRoot.getElementById('title').textContent = name;
     this.shadowRoot.getElementById('price').textContent = price;
+
+    const button = this.shadowRoot.getElementById("add-to-cart");
+    button.addEventListener('click', () => this.addToCart(name));
+  }
+
+  async addToCart(name){
+    console.log("Add to cart innitiated :)");
+    // with name we would make api -request for adding prduct
+    const token = localStorage.getItem("access_token");
+    if (!token){
+      alert("Login first");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://127.0.0.1:5000/user/",{
+        method : "POST",
+        headers : {
+          "Content-Type":"application/json",
+          "Authorization" : `Bearer ${token}`
+        },
+        body : JSON.stringify(
+          {name:name, quantity:1}
+        )
+      });
+
+      console.log(response);
+
+      if (!response.ok){
+        throw new Error("Unautherised");
+      }
+
+      const data = await response.json();
+      alert(data.message);
+    } catch (error){
+      console.log("Hiting Endpoint presented Errro");
+      alert("Session expired or Login Required");
+    }
+  }
+}
+
+
+  // BUG : Broken add to cart logic null properties exception raised :)
+/*
+  async addToCart(name) {
+    try {
+      const token = localStorage.getItem("access_token");
+      console.log(token);
+
+      const response = await fetch("/cart/add", {
+        method: "POST",
+        headers : {
+          "Content-Type" : "application/json",
+          "Authorization":`Bearer ${token}`
+        },
+        body : JSON.stringify({name:name,quantity:1})
+      });
+      if (!response.ok){
+        throw new Error("Failed to add product authenticate first");
+      }
+
+      const data = await response.json();
+      alert("Added to cart");
+      
+    } catch (error) {
+      console.error(error);
+      alert("Please LOgin first ");
+    }
   }
 
 }
+*/
 
 customElements.define('product-card', ProductComponent);
