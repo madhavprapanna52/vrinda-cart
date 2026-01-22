@@ -26,8 +26,10 @@ form.addEventListener("submit", async (e) => {
     // store token
     localStorage.setItem("access_token", data.access_token);
 
-    window.location.href = "/user";
+    // TODO : Make authentication pipeline via using this access tokenn 
+
+    window.location.href = "/products";
   } catch (error) {
-    error.innerText = error.message;
+      error.innerText = error.message;
   }
 });

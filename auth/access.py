@@ -16,7 +16,7 @@ def create_auth_key(user_id):
     payload = {
         "sub": user_id,
         "iat": datetime.utcnow(),
-        "exp": datetime.utcnow() + timedelta(seconds=10)
+        "exp": datetime.utcnow() + timedelta(seconds=20000)
     }
     token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
     return token

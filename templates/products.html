@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products</title>
+
+<head>
+	<title> Product Page </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}">
+
+</head>
+
+<body>
+
+<!-- Template for Product component -->
+<template id="product-template">
+<style>
+img{
+    height : 5rem;
+    width : 4rem;
+    border-radius : 5px;
+}
+
+#product-card{
+    padding : 3%;
+    height : 14rem;
+    width : 14rem;
+    padding : 1%;
+    background-color : hsl(0,0%, 95%);
+    
+    border : 3px solid black;
+    
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction : column;
+    border-radius : 10px;
+}
+
+button{
+    border : none;
+    padding : 2%;
+}
+</style>
+
+<div id="product-card">
+        <h3 id="title"> Product Name</h3>
+        <img src="https://picsum.photos/200/300" alt="img" />
+        <p id="price">0.00</p>
+        <button id="add-to-cart">
+        Add to Cart
+        </button>
+    </div>
+</template>
+
+
+<!-- Products Page layout -->
+
+<div id="main-bar">
+  <div id="account-info">
+        LOGIN
+  </div>
+
+  <div id="nav-bar">
+        <a href="HOME">HOME</a>
+        <a href="user-page">ACCOUNT</a>
+        <a href="help">HELP</a>
+  </div>
+</div>
+
+<div id="listing-box">
+      {% for elem in product_list %}
+      <product-card name="{{ elem[0] }}" price="{{ elem[1] }}">
+      </product-card>
+      {% endfor %}
+</div>
+
+<script src="{{ url_for('static', filename='js/components/Product_component.js') }}"></script>
+
+</body>
+</html>
