@@ -26,7 +26,7 @@ async function loadUserInfo() {
     if (response.status == 401) {
       localStorage.removeItem("access_token");
       console.log("Make endpoint please");
-      // window.location.href = "/login";
+      window.location.href = "/login";
       return;
     }
 
@@ -43,6 +43,6 @@ async function loadUserInfo() {
   } catch(error){
     console.error(error);
     console.log("error");
-    // window.location.href = "/login";
+    window.location.href = "/login";
   }
 }

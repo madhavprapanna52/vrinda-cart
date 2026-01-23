@@ -56,6 +56,6 @@ class General_Object:
         # Re-initialize information
         feilds = list(self.information.keys())
         i = 0
-        for feild in feilds:
-            self.information[feild] = fetch[i]
+        for feild in feilds:  # BUG : Major failior at DB level
+            self.information[feild] = fetch[i]  # INFO : Index out error due to information anchored
             i += 1

@@ -2133,3 +2133,210 @@
 2026-01-23 18:50:48,613 | INFO | Initiating User with information : {self.information}
 2026-01-23 18:50:48,614 | INFO | 127.0.0.1 - - [23/Jan/2026 18:50:48] "GET /user/info HTTP/1.1" 200 -
 2026-01-23 18:50:48,633 | INFO | 127.0.0.1 - - [23/Jan/2026 18:50:48] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2026-01-23 21:47:21,134 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-23 21:47:21,134 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-23 21:47:21,135 | INFO |  * Restarting with stat
+2026-01-23 21:47:21,373 | WARNING |  * Debugger is active!
+2026-01-23 21:47:21,374 | INFO |  * Debugger PIN: 443-674-851
+2026-01-23 21:47:32,563 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:32] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:47:32,611 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:32] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:47:32,616 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:32] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:47:32,640 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:47:32,641 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:47:32,642 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:32] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:47:36,395 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:47:36,432 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:47:36,434 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:47:36,450 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:47:36,450 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:47:36,451 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:47:36,657 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:47:36,695 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:47:36,697 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:47:36,714 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:47:36,714 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:47:36,715 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:47:36,880 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:47:36,917 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:47:36,919 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:47:36,935 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:47:36,936 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:47:36,936 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:36] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:47:38,959 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:38] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:47:38,995 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:38] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:47:38,997 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:38] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:47:39,013 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:47:39,014 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:47:39,015 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:39] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:47:39,404 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:39] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:47:39,447 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:39] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:47:39,449 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:39] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:47:39,458 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:47:39,458 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:47:39,459 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:39] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:47:39,780 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:39] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:47:39,819 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:39] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:47:39,821 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:39] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:47:39,835 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:47:39,835 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:47:39,836 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:39] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:47:45,040 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:45] "GET / HTTP/1.1" 200 -
+2026-01-23 21:47:45,084 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:45] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-23 21:47:45,089 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:45] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-23 21:47:45,090 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:45] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-23 21:47:49,987 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:49] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:47:50,032 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:50] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:47:50,034 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:50] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:47:50,043 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:47:50,043 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:47:50,044 | INFO | 127.0.0.1 - - [23/Jan/2026 21:47:50] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:49:00,332 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:00] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:49:00,373 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:00] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:49:00,375 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:00] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:49:00,394 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:49:00,394 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:00,395 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:00] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:49:01,246 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:49:01,288 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:49:01,289 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:49:01,306 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:49:01,307 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:01,307 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:49:01,491 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:49:01,529 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:49:01,531 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:49:01,547 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:49:01,548 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:01,549 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:49:01,702 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:49:01,764 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:49:01,766 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:49:01,782 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:49:01,783 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:01,783 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:01] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:49:07,944 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:07] "GET /products/ HTTP/1.1" 200 -
+2026-01-23 21:49:08,000 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:08] "[36mGET /static/css/products.css HTTP/1.1[0m" 304 -
+2026-01-23 21:49:08,005 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:08] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-23 21:49:08,008 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:08] "GET /static/js/routing.js HTTP/1.1" 200 -
+2026-01-23 21:49:08,041 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:49:08,041 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:08,042 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:08] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:49:10,581 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:49:10,581 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:10,581 | INFO | Cart information for final update : {cart}
+2026-01-23 21:49:10,582 | INFO | Executing query for searching : select * from users where id = 1
+2026-01-23 21:49:10,582 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:10] "POST /user/cart/add HTTP/1.1" 200 -
+2026-01-23 21:49:20,296 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:20] "GET /login/ HTTP/1.1" 200 -
+2026-01-23 21:49:20,346 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:20] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-23 21:49:20,347 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:20] "[36mGET /static/js/authentication.js HTTP/1.1[0m" 304 -
+2026-01-23 21:49:26,156 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-23 21:49:26,156 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-23 21:49:26,156 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-23 21:49:26,156 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:26,275 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-23 21:49:26,275 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:26,276 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:26] "POST /login/ HTTP/1.1" 200 -
+2026-01-23 21:49:26,301 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:26] "GET /products/ HTTP/1.1" 200 -
+2026-01-23 21:49:26,342 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:26] "[36mGET /static/css/products.css HTTP/1.1[0m" 304 -
+2026-01-23 21:49:26,345 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:26] "[36mGET /static/js/routing.js HTTP/1.1[0m" 304 -
+2026-01-23 21:49:26,346 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:26] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-23 21:49:26,359 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:49:26,359 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:26,360 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:26] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:49:29,356 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:49:29,356 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:29,357 | INFO | Cart information for final update : {cart}
+2026-01-23 21:49:29,357 | INFO | Executing query for searching : select * from users where id = 1
+2026-01-23 21:49:29,357 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:29] "POST /user/cart/add HTTP/1.1" 200 -
+2026-01-23 21:49:32,662 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:32] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:49:32,712 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:32] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:49:32,714 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:32] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:49:32,733 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:49:32,734 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:32,734 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:32] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:49:52,702 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:49:52,702 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:49:52,702 | INFO | Cart information for final update : {cart}
+2026-01-23 21:49:52,702 | INFO | Executing query for searching : select * from users where id = 1
+2026-01-23 21:49:52,703 | INFO | 127.0.0.1 - - [23/Jan/2026 21:49:52] "POST /user/cart/add HTTP/1.1" 200 -
+2026-01-23 21:50:49,282 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-23 21:50:49,282 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-23 21:50:49,283 | INFO |  * Restarting with stat
+2026-01-23 21:50:49,523 | WARNING |  * Debugger is active!
+2026-01-23 21:50:49,524 | INFO |  * Debugger PIN: 443-674-851
+2026-01-23 21:50:51,819 | INFO | 127.0.0.1 - - [23/Jan/2026 21:50:51] "[33mGET /products/user HTTP/1.1[0m" 404 -
+2026-01-23 21:50:58,362 | INFO | 127.0.0.1 - - [23/Jan/2026 21:50:58] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:50:58,407 | INFO | 127.0.0.1 - - [23/Jan/2026 21:50:58] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:50:58,412 | INFO | 127.0.0.1 - - [23/Jan/2026 21:50:58] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:50:58,448 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:50:58,448 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:50:58,450 | INFO | 127.0.0.1 - - [23/Jan/2026 21:50:58] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:50:59,364 | INFO | 127.0.0.1 - - [23/Jan/2026 21:50:59] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:50:59,409 | INFO | 127.0.0.1 - - [23/Jan/2026 21:50:59] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:50:59,411 | INFO | 127.0.0.1 - - [23/Jan/2026 21:50:59] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:50:59,431 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:50:59,432 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:50:59,432 | INFO | 127.0.0.1 - - [23/Jan/2026 21:50:59] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 21:53:47,445 | INFO | 127.0.0.1 - - [23/Jan/2026 21:53:47] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 21:53:47,482 | INFO | 127.0.0.1 - - [23/Jan/2026 21:53:47] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 21:53:47,482 | INFO | 127.0.0.1 - - [23/Jan/2026 21:53:47] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 21:53:47,499 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 21:53:47,499 | INFO | Initiating User with information : {self.information}
+2026-01-23 21:53:47,499 | INFO | 127.0.0.1 - - [23/Jan/2026 21:53:47] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 22:18:53,005 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-23 22:18:53,005 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-23 22:18:53,006 | INFO |  * Restarting with stat
+2026-01-23 22:18:53,263 | WARNING |  * Debugger is active!
+2026-01-23 22:18:53,264 | INFO |  * Debugger PIN: 443-674-851
+2026-01-23 22:18:58,491 | INFO | 127.0.0.1 - - [23/Jan/2026 22:18:58] "GET / HTTP/1.1" 200 -
+2026-01-23 22:18:58,552 | INFO | 127.0.0.1 - - [23/Jan/2026 22:18:58] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-23 22:18:58,554 | INFO | 127.0.0.1 - - [23/Jan/2026 22:18:58] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-23 22:18:58,556 | INFO | 127.0.0.1 - - [23/Jan/2026 22:18:58] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-23 22:19:01,448 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:01] "GET /login/ HTTP/1.1" 200 -
+2026-01-23 22:19:01,490 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:01] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-23 22:19:01,492 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:01] "[36mGET /static/js/authentication.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:06,560 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:06] "[33mGET /login/user HTTP/1.1[0m" 404 -
+2026-01-23 22:19:13,769 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:13] "GET /user/ HTTP/1.1" 200 -
+2026-01-23 22:19:13,815 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:13] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-23 22:19:13,818 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:13] "[36mGET /static/js/InfoLoad.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:13,849 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 22:19:13,850 | INFO | Initiating User with information : {self.information}
+2026-01-23 22:19:13,851 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:13] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 22:19:20,451 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:20] "GET /products/ HTTP/1.1" 200 -
+2026-01-23 22:19:20,497 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:20] "[36mGET /static/css/products.css HTTP/1.1[0m" 304 -
+2026-01-23 22:19:20,502 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:20] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:20,503 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:20] "[36mGET /static/js/routing.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:20,528 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 22:19:20,529 | INFO | Initiating User with information : {self.information}
+2026-01-23 22:19:20,529 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:20] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 22:19:22,281 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:22] "GET /products/ HTTP/1.1" 200 -
+2026-01-23 22:19:22,319 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:22] "[36mGET /static/css/products.css HTTP/1.1[0m" 304 -
+2026-01-23 22:19:22,321 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:22] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:22,323 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:22] "[36mGET /static/js/routing.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:22,338 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 22:19:22,338 | INFO | Initiating User with information : {self.information}
+2026-01-23 22:19:22,339 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:22] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 22:19:23,244 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "GET /products/ HTTP/1.1" 200 -
+2026-01-23 22:19:23,280 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "[36mGET /static/css/products.css HTTP/1.1[0m" 304 -
+2026-01-23 22:19:23,281 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:23,283 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "[36mGET /static/js/routing.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:23,296 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 22:19:23,296 | INFO | Initiating User with information : {self.information}
+2026-01-23 22:19:23,297 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 22:19:23,441 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "GET /products/ HTTP/1.1" 200 -
+2026-01-23 22:19:23,474 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "[36mGET /static/css/products.css HTTP/1.1[0m" 304 -
+2026-01-23 22:19:23,477 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:23,479 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "[36mGET /static/js/routing.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:23,491 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 22:19:23,491 | INFO | Initiating User with information : {self.information}
+2026-01-23 22:19:23,492 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "GET /user/info HTTP/1.1" 200 -
+2026-01-23 22:19:23,605 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "GET /products/ HTTP/1.1" 200 -
+2026-01-23 22:19:23,642 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "[36mGET /static/css/products.css HTTP/1.1[0m" 304 -
+2026-01-23 22:19:23,647 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:23,649 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "[36mGET /static/js/routing.js HTTP/1.1[0m" 304 -
+2026-01-23 22:19:23,658 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-23 22:19:23,658 | INFO | Initiating User with information : {self.information}
+2026-01-23 22:19:23,659 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "GET /user/info HTTP/1.1" 200 -
