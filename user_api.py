@@ -14,9 +14,14 @@ from auth.access import *
 
 user_endpoint = Endpoint("users")
 
-user_page = Blueprint('user',__name__)
+user_page = Blueprint('cart',__name__)
 
-@user_page.route('/', methods=['POST','GET'])
+@user_page.route("/", methods=['POST', 'GET'])
+def user():
+    information = {"name":"mad", "cart":["item1", "bom2"]}
+    return render_template('user.html', information=information)
+
+@user_page.route('/cart/add', methods=['POST','GET'])
 def cart_update():
     if request.method == "GET":
         return "I am their"
@@ -51,3 +56,30 @@ def cart_update():
     user.cart(2, elem)
 
     return jsonify({"message" : "Adding to cart"}), 200
+
+@user_page.route('/info', methods=['GET'])
+def info():
+    header = request.headers.get("Authorization")
+
+    if not header:
+        return jsonify({"message" : "NO Authentication"})
+    try:
+        token = header.split(" ")[1]
+        print(f"Token fetched as {token}")
+    except IndexError:
+        return jsonify({"message" : "Auth failed "}), 401
+    
+    try:
+        payload = verify_auth_key(token)
+        print(f"Payload {payload}")
+    except Exception as e:
+        return jsonify({"message" : str(e)}), 401
+    id = payload.get("sub")  # id of the authenticated user
+
+    info = ("id", id)
+    info = tuple(info)
+    user = User(info, user_endpoint)  # INFO : AGAINSTT DRY BUT WITH KISS FOR NOW 
+    name = user.information["name"]
+    print(f"got name as {name}")
+
+    return jsonify({"name" : name}),200  # final return

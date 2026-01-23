@@ -52,7 +52,10 @@ body{
 #account-info{
   background-color : hsl(0,0%,95%);
   height : 3rem;
-  width : 3rem;
+  width : 5rem;
   border-radius : 5px;
+  display : flex;
+  align-items : center;
+  justify-content : center;
 }
 
