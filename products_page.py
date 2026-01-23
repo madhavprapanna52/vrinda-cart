@@ -14,7 +14,7 @@ products_page = Blueprint('products',__name__)
 
 print(f"Product list : {product_list}")
 
-# TODO : Make working user login and product listing feature | wrap project complete
+# TODO : Make working user login and product listing feature | wrap project complete [DONE]
 
 @products_page.route('/', methods=['GET'])
 def products():

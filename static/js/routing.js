@@ -26,7 +26,7 @@ async function loadUserInfo() {
     if (response.status == 401) {
       localStorage.removeItem("access_token");
       console.log("Make endpoint please");
-      window.location.href = "/login";
+      // window.location.href = "/login";
       return;
     }
 
@@ -35,13 +35,14 @@ async function loadUserInfo() {
     }
 
     const data = await response.json();
+    // fetch all DOM Elements
     const info = document.getElementById("account-info");
+
     info.innerText = data.name;
 
-    // Add for cart fetch and payment request
   } catch(error){
     console.error(error);
     console.log("error");
-    window.location.href = "/login";
+    // window.location.href = "/login";
   }
 }

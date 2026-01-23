@@ -11,6 +11,7 @@ from models.User import *
 from DB.Endpoint import *
 from flask import Blueprint, render_template, request, jsonify
 from auth.access import *
+import json
 
 user_endpoint = Endpoint("users")
 
@@ -18,8 +19,7 @@ user_page = Blueprint('cart',__name__)
 
 @user_page.route("/", methods=['POST', 'GET'])
 def user():
-    information = {"name":"mad", "cart":["item1", "bom2"]}
-    return render_template('user.html', information=information)
+    return render_template("user.html")
 
 @user_page.route('/cart/add', methods=['POST','GET'])
 def cart_update():
@@ -59,6 +59,11 @@ def cart_update():
 
 @user_page.route('/info', methods=['GET'])
 def info():
+    """
+        Info route fetches information about cart and order items also with cart information json pass
+        REQUIRED TO CHANGE DB FOR PASSWORD STORAGE 
+    """
+    # BUG : Required to store password into different table at DB
     header = request.headers.get("Authorization")
 
     if not header:
@@ -79,7 +84,19 @@ def info():
     info = ("id", id)
     info = tuple(info)
     user = User(info, user_endpoint)  # INFO : AGAINSTT DRY BUT WITH KISS FOR NOW 
-    name = user.information["name"]
-    print(f"got name as {name}")
+    information = user.information
 
-    return jsonify({"name" : name}),200  # final return
+    cart_dict = json.loads(information["cart"])
+    cart_list = []
+    for item in cart_dict.keys():
+        elem = ""
+        elem += str(item) # key 
+        elem += f" {str(cart_dict[item])}"
+        cart_list.append(elem)
+
+    # Load final data for the frontend
+    name = information["name"]
+    print(f"Information fetched why not name : {name}")
+    orders = ["Order1", "Order2"]  # dummy order
+
+    return jsonify({"name" : name, "order" : orders, "cart" : cart_list}),200  # final return
