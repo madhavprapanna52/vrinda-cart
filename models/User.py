@@ -12,7 +12,7 @@ class User(General_Object):
         Makes transactions at order level
     Issue with the cart operatioins
     """
-    def __init__(self, information, endpoint):
+    def __init__(self, information, endpoint):  # FIX : Self initiates required for pasword hash system for storing the password
         feilds = "id,name,password,wallet,cart".split(",")
         super().__init__(information, feilds, endpoint)
         log.info("Initiating User with information : {self.information}")

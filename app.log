@@ -2340,3 +2340,152 @@
 2026-01-23 22:19:23,658 | INFO | Executing query for searching : select * from users where id = '1'
 2026-01-23 22:19:23,658 | INFO | Initiating User with information : {self.information}
 2026-01-23 22:19:23,659 | INFO | 127.0.0.1 - - [23/Jan/2026 22:19:23] "GET /user/info HTTP/1.1" 200 -
+2026-01-24 07:18:24,603 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-24 07:18:24,603 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-24 07:18:24,605 | INFO |  * Restarting with stat
+2026-01-24 07:18:24,891 | WARNING |  * Debugger is active!
+2026-01-24 07:18:24,991 | INFO |  * Debugger PIN: 714-129-951
+2026-01-24 07:18:29,576 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:29] "GET / HTTP/1.1" 200 -
+2026-01-24 07:18:29,717 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:29] "[36mGET /static/css/index-style.css HTTP/1.1[0m" 304 -
+2026-01-24 07:18:29,733 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:29] "[36mGET /static/icons/shop_icon.svg HTTP/1.1[0m" 304 -
+2026-01-24 07:18:29,734 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:29] "[36mGET /static/icons/LOGO.svg HTTP/1.1[0m" 304 -
+2026-01-24 07:18:33,694 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:33] "[32mGET /login HTTP/1.1[0m" 308 -
+2026-01-24 07:18:33,732 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:33] "GET /login/ HTTP/1.1" 200 -
+2026-01-24 07:18:33,819 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:33] "[36mGET /static/js/authentication.js HTTP/1.1[0m" 304 -
+2026-01-24 07:18:33,820 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:33] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-24 07:18:38,783 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:38,784 | INFO | [auth] user searched output : []
+2026-01-24 07:18:38,784 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:38,803 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:38] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:18:41,906 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:41,906 | INFO | [auth] user searched output : []
+2026-01-24 07:18:41,907 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:41,914 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:41] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:18:42,749 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:42,749 | INFO | [auth] user searched output : []
+2026-01-24 07:18:42,749 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:42,756 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:42] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:18:43,144 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:43,145 | INFO | [auth] user searched output : []
+2026-01-24 07:18:43,145 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:43,151 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:43] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:18:43,339 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:43,339 | INFO | [auth] user searched output : []
+2026-01-24 07:18:43,339 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:43,345 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:43] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:18:43,530 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:43,530 | INFO | [auth] user searched output : []
+2026-01-24 07:18:43,530 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:18:43,536 | INFO | 127.0.0.1 - - [24/Jan/2026 07:18:43] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:21:27,280 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/DB/General_Object.py', reloading
+2026-01-24 07:21:27,345 | INFO |  * Restarting with stat
+2026-01-24 07:21:27,583 | WARNING |  * Debugger is active!
+2026-01-24 07:21:27,584 | INFO |  * Debugger PIN: 714-129-951
+2026-01-24 07:21:31,535 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:21:31,536 | INFO | [auth] user searched output : []
+2026-01-24 07:21:31,536 | INFO | Executing query for searching : select * from users where name = 'madhav'
+2026-01-24 07:21:31,546 | INFO | 127.0.0.1 - - [24/Jan/2026 07:21:31] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:23:18,331 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/DB/General_Object.py', reloading
+2026-01-24 07:23:18,389 | INFO |  * Restarting with stat
+2026-01-24 07:23:18,622 | WARNING |  * Debugger is active!
+2026-01-24 07:23:18,622 | INFO |  * Debugger PIN: 714-129-951
+2026-01-24 07:24:09,964 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/DB/General_Object.py', reloading
+2026-01-24 07:24:10,019 | INFO |  * Restarting with stat
+2026-01-24 07:24:10,247 | WARNING |  * Debugger is active!
+2026-01-24 07:24:10,247 | INFO |  * Debugger PIN: 714-129-951
+2026-01-24 07:24:18,452 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:18,453 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:18,453 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:18,465 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:18] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:18,957 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:18,958 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:18,958 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:18,964 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:18] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:19,658 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:19,658 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:19,658 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:19,664 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:19] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:20,258 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:20,258 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:20,258 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:20,265 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:20] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:20,451 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:20,451 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:20,451 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:20,458 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:20] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:20,627 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:20,627 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:20,627 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:20,633 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:20] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:20,818 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:20,819 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:20,819 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:20,825 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:20] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:21,257 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:21,257 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:21,257 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:21,264 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:21] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:21,507 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:21,508 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:21,508 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:21,514 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:21] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:21,808 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:21,808 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:21,809 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:21,814 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:21] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:22,065 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:22,066 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:22,066 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:22,072 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:22] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:37,986 | INFO | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-01-24 07:24:37,986 | INFO | [33mPress CTRL+C to quit[0m
+2026-01-24 07:24:37,986 | INFO |  * Restarting with stat
+2026-01-24 07:24:38,222 | WARNING |  * Debugger is active!
+2026-01-24 07:24:38,222 | INFO |  * Debugger PIN: 714-129-951
+2026-01-24 07:24:40,848 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:40] "GET /login/ HTTP/1.1" 200 -
+2026-01-24 07:24:40,948 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:40] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-24 07:24:40,957 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:40] "[36mGET /static/js/authentication.js HTTP/1.1[0m" 304 -
+2026-01-24 07:24:42,694 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:42,694 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:24:42,694 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:24:42,705 | INFO | 127.0.0.1 - - [24/Jan/2026 07:24:42] "[35m[1mPOST /login/ HTTP/1.1[0m" 500 -
+2026-01-24 07:24:59,374 | INFO |  * Detected change in '/home/madhav/Projects/vrinda-cart/DB/General_Object.py', reloading
+2026-01-24 07:24:59,428 | INFO |  * Restarting with stat
+2026-01-24 07:24:59,668 | WARNING |  * Debugger is active!
+2026-01-24 07:24:59,668 | INFO |  * Debugger PIN: 714-129-951
+2026-01-24 07:25:01,808 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:01] "GET /login/ HTTP/1.1" 200 -
+2026-01-24 07:25:01,881 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:01] "[36mGET /static/css/login-style.css HTTP/1.1[0m" 304 -
+2026-01-24 07:25:01,882 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:01] "[36mGET /static/js/authentication.js HTTP/1.1[0m" 304 -
+2026-01-24 07:25:03,648 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:25:03,649 | INFO | [auth] user searched output : (1, 'mad', '$argon2id$v=19$m=65536,t=3,p=4$vjcG4JyT8l6LMUbovRcCwA$hbIju5PsmyYSQMuVlwmsaehljPceUKqZWJYf4gIxOms', 10, '{"Mac-book": 1, "Rolls-Royce": 1}')
+2026-01-24 07:25:03,649 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:25:03,649 | INFO | Initiating User with information : {self.information}
+2026-01-24 07:25:03,768 | INFO | Executing query for searching : select * from users where name = 'mad'
+2026-01-24 07:25:03,769 | INFO | Initiating User with information : {self.information}
+2026-01-24 07:25:03,782 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:03] "POST /login/ HTTP/1.1" 200 -
+2026-01-24 07:25:03,809 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:03] "[32mGET /products HTTP/1.1[0m" 308 -
+2026-01-24 07:25:03,843 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:03] "GET /products/ HTTP/1.1" 200 -
+2026-01-24 07:25:03,920 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:03] "[36mGET /static/css/products.css HTTP/1.1[0m" 304 -
+2026-01-24 07:25:03,924 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:03] "[36mGET /static/js/components/Product_component.js HTTP/1.1[0m" 304 -
+2026-01-24 07:25:03,926 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:03] "GET /static/js/routing.js HTTP/1.1" 200 -
+2026-01-24 07:25:03,986 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-24 07:25:03,986 | INFO | Initiating User with information : {self.information}
+2026-01-24 07:25:03,987 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:03] "GET /user/info HTTP/1.1" 200 -
+2026-01-24 07:25:05,842 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-24 07:25:05,842 | INFO | Initiating User with information : {self.information}
+2026-01-24 07:25:05,843 | INFO | Cart information for final update : {cart}
+2026-01-24 07:25:05,843 | INFO | Executing query for searching : select * from users where id = 1
+2026-01-24 07:25:05,843 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:05] "POST /user/cart/add HTTP/1.1" 200 -
+2026-01-24 07:25:08,471 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-24 07:25:08,471 | INFO | Initiating User with information : {self.information}
+2026-01-24 07:25:08,472 | INFO | Cart information for final update : {cart}
+2026-01-24 07:25:08,472 | INFO | Executing query for searching : select * from users where id = 1
+2026-01-24 07:25:08,473 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:08] "POST /user/cart/add HTTP/1.1" 200 -
+2026-01-24 07:25:12,028 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:12] "GET /user/ HTTP/1.1" 200 -
+2026-01-24 07:25:12,122 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:12] "GET /static/js/InfoLoad.js HTTP/1.1" 200 -
+2026-01-24 07:25:12,124 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:12] "[36mGET /static/css/style_user.css HTTP/1.1[0m" 304 -
+2026-01-24 07:25:12,166 | INFO | Executing query for searching : select * from users where id = '1'
+2026-01-24 07:25:12,167 | INFO | Initiating User with information : {self.information}
+2026-01-24 07:25:12,167 | INFO | 127.0.0.1 - - [24/Jan/2026 07:25:12] "GET /user/info HTTP/1.1" 200 -

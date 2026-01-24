@@ -15,7 +15,7 @@ class Endpoint:
         """
             option = 1 -> fetch output |
         """
-        cursor.execute(query)
+        cursor.execute(query)  # FIX : cursor execution is reuqired to be moduler and into single threaded such that it wont mess up the execution pipeline
         connection.commit()
 
         if option == 1:
@@ -96,12 +96,3 @@ class Endpoint:
     def delete(self, target_id):
         query = f"delete from {self.table_name} where id = {target_id}"
         self.execute(query)
-
-
-
-
-
-
-
-
-

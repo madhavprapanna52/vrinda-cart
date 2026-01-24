@@ -19,6 +19,7 @@ class General_Object:
             else : Search based initiation with information type being tuple
 
         '''
+        # BUG : Creating hybrid initialisation is breaking whole application ; needs crititcal fix 
         self.feilds = feilds
         self.endpoint = endpoint
         # Creating object if len(information) > 1
@@ -33,12 +34,15 @@ class General_Object:
             search_information = information
         # DB search for initiating object information
         fetch = self.endpoint.search(search_information)  # One tuple
+        if len(fetch) == 0:
+            return False
         # Validate fetch details with feilds given for validation
         self.information = {}
-        i = 0
+        i = 0 # FIX : information dictionary would'nt have id
         for e in feilds:
             self.information[e] = fetch[i]
             i += 1
+        return True
     
     def update(self, edit_information):
         """

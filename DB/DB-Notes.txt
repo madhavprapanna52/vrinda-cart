@@ -1,0 +1,16 @@
+## Executor
+A single thread execution object is required to handle all DB
+operations, making safe and persistent DB pipeline.
+
+INPUT : query, data_fields, fetch_required
+  Making query via passing requirements as separate data set,
+  building with placeholders for safety
+
+  placeholder based approach for query is safe as we pass the values and literal text thus it would be pasted to search for exact thing with given name not execute with whatever thing is their.
+
+  Insertion query : "INSERT INTO users (name, email, age) VALUES (?, ?, ?)"
+  Build the value based thing internally as fields are fixed for insertion
+
+  fetch output should consist of consistent shape to prevent break and handle.
+
+  Using FILO sequence for DB operations and log execution overview into main log file

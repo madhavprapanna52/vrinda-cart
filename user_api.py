@@ -57,6 +57,14 @@ def cart_update():
 
     return jsonify({"message" : "Adding to cart"}), 200
 
+@user_page.route('/buy', methods=['POST', 'GET'])
+def buy():
+    """
+    Final transaction endpoint for orders and making checkout for the products in cart for user
+    """
+    
+
+
 @user_page.route('/info', methods=['GET'])
 def info():
     """
