@@ -13,4 +13,17 @@ Current issues
       > Abstract python communication unit and JS one unit for all communication for routing api and access token based system
       > One python auth gateway for handeling all api requests at once and providing required request access .
 
-  3. Testing units are also required 
+  3. Testing units are also required
+
+
+----------------------------------------- 
+
+Refactor target
+1. Implementing simple Executor at DB level for making final transactions for the DB transfers
+2. Improving Query generation way for making attack safe and validated pipeline
+3. Query generator required for making all query and one executor for all execution and making endpoint to abstract those handles
+4. General object inherits tools to use for making mass Handle of data flow | Endpoint handles atomic units General object manage bulk requests and target shots
+5. More robust models with working final DB-endpoint ready functions with good status and roolback mechanism
+6. Writing final routing for final project routeups
+
+# Make sure to complete all front-end requirements for robust and real front-end
