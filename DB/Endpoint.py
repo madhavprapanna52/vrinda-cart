@@ -1,5 +1,5 @@
 import sqlite3 as sql
-from config import *
+#from config import *
 
 connection = sql.connect("/home/madhav/Projects/vrinda-cart/DB/vrinda-cart.db", check_same_thread=False)  # FIX : Very temporary 
 
@@ -38,7 +38,7 @@ class Endpoint:
         else:
             query += f" {column} = {value}"
 
-        log.info(f"Executing query for searching : {query}")
+        #log.info(f"Executing query for searching : {query}")
         result = self.execute(query, 1) # fetch_result
         # if result have one length its target search / mass search
         if len(result) == 1:
