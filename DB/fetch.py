@@ -1,34 +1,50 @@
-'''
-    Central DB truth fetching unit
-Handeling all fetch requests for giving the required data state at given time
-'''
-import sqlite3 as sql
+"""
+Searching tool endpoint
+search handle
+    Search Handle for the tables
+    Function
+        + filter
+        + search target
+        + instance
+"""
 
-def search(table, targets, anchor_dict, connection):
-    cols = ", ".join(anchor_dict.keys())
-    placeholder = ", ".join(["?"] * len(anchor_dict.keys()))
+class Search:
+    def __init__(self, connection, table_name):
+        self.table_name = table_name
+        self.connection = connection
 
-    targets = ", ".join(targets)
+    def fetch_result(self, query):
+        cursor = self.connection.cursor()
+        print(f"Given query for search {query}")
+        try:
+            cursor.execute(query)
+            return cursor.fetchall()  # returning isntance about DB
+        except Exception as e:
+            print(f"Exception raised as {e}")
+            return None
+    def target_search(self, anchor_info, target_cols="*"):
+        col = anchor_info[0]
+        val = anchor_info[1]
 
-    vals = tuple(anchor_dict.values())
+        if type(target_cols) == list:
+            required_tables = ", ".join(target_cols)
+            query = f"SELECT {required_tables} FROM {self.table_name} WHERE {cols} = '{vals}'"
+        else:
+            query = f"SELECT * FROM {self.table_name} WHERE {col} = '{val}'"
+        target_filter = self.fetch_result(query)
+        return target_filter[0]  # filter results
 
-    query = f"SELECT {targets} from {table} where ({cols}) = ({placeholder})"
-    print(f"search query made out as : {query}")
-    fetch_handle = connection.cursor()
 
-    try:
-        fetch_handle.execute(query, vals)
-        result = fetch_handle.fetchall()
+    def target_cols(self, targets):
+        targets = ", ".join(targets)
+        print(f"target : {targets}")
+        query = f"SELECT {targets} FROM {self.table_name}"
+        print(f"Query for search : {query}")
+        result = self.fetch_result(query)
         return result
-    except Exception as e:
-        print(f"Exception occured while fetching as {e}")
-        return None
 
-path = "/home/madhav/Projects/vrinda-cart/DB/vrinda-cart.db"
-connection = sql.connect(path)
 
-d = {"name" : "GigaBite"}
-target = ["stock", "price", "id"]
-output = search("products", target, d, connection)
-print(f"Fetch results as {output}")
-
+    def instance(self):
+        query = f"SELECT * FROM {self.table_name}"
+        result = self.fetch_result(query)
+        return result
