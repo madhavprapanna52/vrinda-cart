@@ -7,6 +7,7 @@ from queue import Queue
 import sqlite3 as sql
 from dataclasses import dataclass
 from typing import Tuple, Any
+#import config
 
 # Task Data Model
 '''
@@ -16,10 +17,11 @@ from typing import Tuple, Any
 
 @dataclass
 class Task:
-    qt: str
+    query_type: str
     table: str
     columns: Tuple[str, ...]
-    values: Tuple[Any, ...]  # INFO : serialise multiple data via external loops
+    values: Tuple[Any, ...]  # INFO : serialise multiple data vrinda-carta external loops
+
 
 def build_query(q_type:str, table:str, columns:tuple):
     '''
@@ -47,15 +49,12 @@ class Executor:
     inputs : query_type, task
     output : None if operative query or results if fetch query initiated
     '''
-    def __init__(self, connection_file):
-        self.connection_file = connection_file
+    def __init__(self, path):
+        self.connection_file = path
         self.order = Queue(maxsize=10) # Limmiting test
-        print(f"Order Queue ~ {self.order}")
 
     def add(self, task):
         self.order.put(task)
-        print(f"order Now {self.order}")
-        print(f"Task is Added to the executor as {task}")
 
     def run(self):
         connection = sql.connect(self.connection_file)
@@ -63,22 +62,14 @@ class Executor:
 
         while True:
             task = self.order.get() # Taking task from queue
-            print("I am running +u+")
             try:
-                query = build_query(task.qt, task.table, task.columns)
-                print(f"Final Query : {query}")
+                query = build_query(task.query_type, task.table, task.columns)
+                #log.info(f"Final Query for DB call : {query}")
                 cursor.execute(query, task.values)
                 connection.commit()
 
             except Exception as e:
                 connection.rollback()
-                print(f"Query failed with : {e}")
+                #log.warning(f" [Failed] Exector failed with Error : {e}")
             finally:
                 self.order.task_done()
-                print(f"Order Now after task done : {self.order}")
-
-
-
-
-        
-

@@ -14,3 +14,14 @@ INPUT : query, data_fields, fetch_required
   fetch output should consist of consistent shape to prevent break and handle.
 
   Using FILO sequence for DB operations and log execution overview into main log file
+
+Implemented Simple Executor which would make sure to make good inputs and output flow
+
+Search utility
+  search requirements
+    1. searching for existing customer : targeted search
+    2. mass search : Instance fetch , geting information about the whole table at once
+    3. filter search : Making filters based DB search
+
+    search utility
+      making search unit to fetch all searches with one connection

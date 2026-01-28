@@ -7,11 +7,12 @@ search handle
         + search target
         + instance
 """
+import sqlite3 as sql
 
 class Search:
-    def __init__(self, connection, table_name):
+    def __init__(self, path, table_name):
         self.table_name = table_name
-        self.connection = connection
+        self.connection = sql.connect(path)
 
     def fetch_result(self, query):
         cursor = self.connection.cursor()
@@ -22,7 +23,7 @@ class Search:
         except Exception as e:
             print(f"Exception raised as {e}")
             return None
-    def target_search(self, anchor_info, target_cols="*"):
+    def target_search(self, anchor_info, target_cols="name"):  # FIX : Data set flow still broken here 
         col = anchor_info[0]
         val = anchor_info[1]
 
@@ -30,21 +31,16 @@ class Search:
             required_tables = ", ".join(target_cols)
             query = f"SELECT {required_tables} FROM {self.table_name} WHERE {cols} = '{vals}'"
         else:
-            query = f"SELECT * FROM {self.table_name} WHERE {col} = '{val}'"
+            query = f"SELECT {target_cols} FROM {self.table_name} WHERE {col} = '{val}'"
         target_filter = self.fetch_result(query)
         return target_filter[0]  # filter results
 
 
-    def target_cols(self, targets):
-        targets = ", ".join(targets)
-        print(f"target : {targets}")
+    def target_cols(self, targets="*"):
+        
+        if type(targets) == list:
+            targets = ", ".join(targets)
+
         query = f"SELECT {targets} FROM {self.table_name}"
-        print(f"Query for search : {query}")
-        result = self.fetch_result(query)
-        return result
-
-
-    def instance(self):
-        query = f"SELECT * FROM {self.table_name}"
         result = self.fetch_result(query)
         return result
