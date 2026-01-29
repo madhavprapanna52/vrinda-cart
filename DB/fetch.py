@@ -23,17 +23,25 @@ class Search:
         except Exception as e:
             print(f"Exception raised as {e}")
             return None
-    def target_search(self, anchor_info, target_cols="name"):  # FIX : Data set flow still broken here 
-        col = anchor_info[0]
-        val = anchor_info[1]
+    def target_search(self, anchor_info, target="name"):  # FIX : Data set flow still broken here 
+        col = anchor_info[0] # anchor column
+        val = anchor_info[1] # anchor value
 
-        if type(target_cols) == list:
-            required_tables = ", ".join(target_cols)
-            query = f"SELECT {required_tables} FROM {self.table_name} WHERE {cols} = '{vals}'"
+        # search with anchor for a single specific and fetch the output
+        query = f"SELECT "
+        if type(target) == list:
+            target = ", ".join(target)
+            query += target
         else:
-            query = f"SELECT {target_cols} FROM {self.table_name} WHERE {col} = '{val}'"
+            query += target
+        query += f" FROM {self.table_name} WHERE {col} = "
+        if type(val) == int:
+            query += f"{val}"
+        else:
+            query += f"'{val}'"
+        print(f"Final search target query : {query}")
         target_filter = self.fetch_result(query)
-        return target_filter[0]  # filter results
+        return target_filter  # filter results
 
 
     def target_cols(self, targets="*"):
