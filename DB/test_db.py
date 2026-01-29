@@ -1,19 +1,27 @@
 from fetch import *
 import sqlite3 as sql
+from Central_Executor import *
+
+
 path = "/home/madhav/Projects/vrinda-cart/DB/vrinda-cart.db"
 
-connection = sql.connect(path)
+e = Executor(path)
 
-products_search_handle = Search(connection, "products")
+cols = "name,price,stock".split(",")
+vals = ["mac",10,10]
 
-print(f"Instance of product : {products_search_handle.instance()}")
+cols = tuple(cols)
+vals = tuple(vals)
+anchor = ["id",1]
+anchor = tuple(anchor)
 
-# Target test
-targets = "name,id".split(",")
-r = products_search_handle.target_cols(targets)
-print(f"Result of target_cols : {r}")
+c = Edit(
+    table="products",
+    edit_column="name",
+    edit_value="Mac-OS",
+    anchor_info=anchor
+)
 
-a = ("name","GigaBite")
-t = products_search_handle.target_search(a)
-print(f"Giving target fetch as {t}")
+e.add(c)
+e.run()
 

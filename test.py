@@ -7,9 +7,18 @@ central_executor = Executor(path)
 
 threading.Thread(
     target=central_executor.run,
-    daemon=True
+    daemon=False
 ).start()
 
 product_endpoint = Endpoint("products", central_executor)
 
-product_endpoint.search()
+info = {
+    "name" : "AccerLaptop",
+    "price" : 10,
+    "stock" : 10
+}
+
+target = ("id" : 1)
+product_endpoint.edit(edit, target)
+
+
