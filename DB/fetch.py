@@ -23,7 +23,7 @@ class Search:
         except Exception as e:
             print(f"Exception raised as {e}")
             return None
-    def target_search(self, anchor_info, target="name"):  # FIX : Data set flow still broken here 
+    def target_search(self, anchor_info, target="name"):
         col = anchor_info[0] # anchor column
         val = anchor_info[1] # anchor value
 
