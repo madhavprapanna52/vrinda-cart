@@ -16,6 +16,7 @@ from dataclasses import dataclass
 class Task:
     query:str
     data: Tuple[Any, ...]
+    status : str = "pending"  # pending | done | failed
 
 
 class Dobject:
@@ -97,6 +98,20 @@ class Dobject:
         )
         print(f"final Task for making edit : {task}")
         self.executor.tasks.put(task)
-        self.executor.run()
-        
+        return task.status
+
+    def delete(self, anchor_information):
+        s = anchor_information[0]
+        query = self.build_query.delete(s)
+
+        values = [anchor_information[1]]
+        values = tuple(values)
+
+        task = Task(
+            query=query,
+            data=values
+        )
+
+        self.executor.put(task, values)
+        return task.status
 

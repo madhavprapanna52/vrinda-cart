@@ -25,8 +25,9 @@ class Executor:
                 cursor.execute(query, data)
                 connection.commit()
                 print(f"Query Executed")
-                return True
+                task.status = "done"
 
             except Exception as e:
                 connection.rollback()
                 print(f"Exception rasied as : {e}")
+                task.status = "failed"
