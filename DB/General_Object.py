@@ -9,6 +9,10 @@ class General_Object:
             small query for DB-handle
         2. Initiating DB-sync object for data flow
         3.sync functions for object data flow
+
+    REFACTOR TARGETS
+    1. Making it generic to handle order, product and user data flow
+    2. Making generic update, create , delete and fetch pipeline with element focused not mass focused
     '''
     def __init__(self, information, feilds, endpoint):
         '''

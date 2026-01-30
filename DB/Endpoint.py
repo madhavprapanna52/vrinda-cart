@@ -6,6 +6,14 @@ connection = sql.connect("/home/madhav/Projects/vrinda-cart/DB/vrinda-cart.db", 
 cursor = connection.cursor()
 
 
+"""
+    Implement reliable DB flow such that data doesnt crashes mid way and persist into the whole application
+Refactor requirements
++ extensible Endpoint for handeling a generic requests from all tables and make requests within thread safe way
++ Implement good read and write utilities for efficient read and write requests handle for all General objects DB flow
+"""
+
+
 class Endpoint:
     def __init__(self, table_name):
         self.table_name = table_name
@@ -24,7 +32,7 @@ class Endpoint:
         else:
             return None
 
-    def search(self, anchor_information, fetch_target="*"):
+    def search(self, anchor_information, fetch_target="*"): # FIX : Reading crashes with single thread request required a set of fetching pipeline to handle the request
         """
         anchor_information : (column, value)
         """

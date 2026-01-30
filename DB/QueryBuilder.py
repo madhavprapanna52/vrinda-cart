@@ -48,7 +48,7 @@ class QueryBuilder:
         query = f"select {required_columns} from {self.table}"
         # if condition is given we would fetch target information
         if len(condition_string) > 1:
-            query += f"where {condition_string} = ?"
+            query += f" where {condition_string} = ?"
             return query
         else:
             return query

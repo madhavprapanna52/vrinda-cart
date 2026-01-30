@@ -1,35 +1,19 @@
-from fetch import *
-import sqlite3 as sql
-from Central_Executor import *
+from Dobject import *
+from ExecutorHandle import *
 
 
+information = {"name":"Accer-laptop", "price":10, "stock":10}
+handle = Executor()
+table_name = "products"
 path = "/home/madhav/Projects/vrinda-cart/DB/vrinda-cart.db"
 
-e = Executor(path)
 
-cols = "name,price,stock".split(",")
-vals = ["Rools-Roece",10,10]
 
-cols = tuple(cols)
-vals = tuple(vals)
-anchor = ["id",1]
 
-anchor = tuple(anchor)
+d = Dobject(handle, table_name)
 
-c = Edit(
-    table="products",
-    edit_column="name",
-    edit_value="Mac-OS",
-    anchor_info=anchor
-)
+edit_information = ["name", "Mercedees"]
+anchor_information = ["id", 1]  # test with one as string
 
-c2 = Create(
-    table="products",
-    columns=cols,
-    values=vals
-)
-
-e.add(c)
-e.add(c2)
-e.run()
-
+r = d.edit(edit_information, anchor_information)  # End point request
+print(f"creation result as : {r}")
