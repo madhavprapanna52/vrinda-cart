@@ -21,7 +21,7 @@ class Task:
     table: str
     columns: Tuple[str, ...]
     values: Tuple[Any, ...]  # INFO : serialise muAltiple data vrinda-carta external loops
-    anchor: List[Any, ...]
+    anchor: list[Any, ...]
 
 
 def build_query(task):

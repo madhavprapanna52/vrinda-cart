@@ -105,3 +105,9 @@ class Search:
         Central Search unit for searching DB information
     fetch usefull information via independent connections for each fetch request
     """
+    def __init__(self, path):
+        self.path = path
+
+    def fetch(self, query, data):
+        with sql.connect(self.path) as connection:
+            print(f"Spinned a connection to work with and execute the main functions")

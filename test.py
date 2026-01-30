@@ -21,4 +21,3 @@ info = {
 target = ("id" : 1)
 product_endpoint.edit(edit, target)
 
-
