@@ -19,11 +19,20 @@ Current issues
 ----------------------------------------- 
 
 Refactor target
-1. Implementing simple Executor at DB level for making final transactions for the DB transfers
-2. Improving Query generation way for making attack safe and validated pipeline
-3. Query generator required for making all query and one executor for all execution and making endpoint to abstract those handles
-4. General object inherits tools to use for making mass Handle of data flow | Endpoint handles atomic units General object manage bulk requests and target shots
+1. Implementing simple Executor at DB level for making final transactions for the DB transfers [done]]
+2. Improving Query generation way for making attack safe and validated pipeline [done]]
+3. Query generator required for making all query and one executor for all execution and making endpoint to abstract those handles [done]]
+4. General object inherits tools to use for making mass Handle of data flow | Endpoint handles atomic units General object manage bulk requests and target shots {done}}
 5. More robust models with working final DB-endpoint ready functions with good status and roolback mechanism
 6. Writing final routing for final project routeups
+
+------------------------------------------
+30jan,2026
+Updated plan
+Working DB-Unit Implemented with working threaded executions :)
++ Improve models data flow with new updated DB-unit
++ Improve with making good ready frontend api endpoints for final application frontend
++ Refine frontend with awesome cool UI-UX work to wrap up project completion towards working MVP :)
+
 
 # Make sure to complete all front-end requirements for robust and real front-end
