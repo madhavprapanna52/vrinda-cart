@@ -1,33 +1,45 @@
 
 
 class Product:
-    def __init__(self, information, handle):
+    def __init__(self, anchor_information, handle):
         '''
         If it exist then only we would load information from DB
         '''
-        self.information = {}
+        self.information = {}  # information dictionary
 
-        anchor = list(information.keys())[0]
-        value = information[anchor]
+        self.anchor_information = anchor_information
         self.handle = handle
+        self.columns = "name,price,stock".split(",")  # critical :)
+        self.sync()  # Making sync at Initiation level
 
-        columns = list(information.keys())
+    def sync(self):  # BUG : Synchronisation inst working
+        ''' Takes request from DB --> Updates the information dict '''
+        columns = self.columns 
 
-        info = [anchor, value]
-        status, result = self.handle.exist(info)
-        print(f"result : {result}")
+        status, result = self.handle.exist(self.anchor_information)
+
         if status:
-            print("Product Exist Initiation from DB")
-            i = 1
-            for col, val in zip(columns, result[0][1:]):
-                self.information[col] = val
-
+            for k, v in zip(columns, result[0][1:]):
+                self.information[k] = v  # Initiating key value
+            return True # success GOAT INdenTatIon 
         else:
-            print("Initiation terminated | Make Element first")
-        print(f"initiation output : {self.information}")
+            return False
 
     def stock(self, update=-1):
-        print(f"Working update as {update}")
-
-
-
+        '''
+        fetch current stock
+        update it via update number | raise Error while stock out
+        commit into DB-unit
+        '''
+        try:
+            stock_instance = self.information["stock"]
+        except Exception as e:
+            return False
+        # Stock update request
+        stock_instance = int(stock_instance)
+        updated_stock = stock_instance + update # Making update
+        # stock update information
+        edit_information = ("stock", updated_stock)
+        
+        self.handle.edit(edit_information, self.anchor_information)
+        sync_request = self.sync()

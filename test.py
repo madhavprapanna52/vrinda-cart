@@ -8,17 +8,21 @@ handle = Executor()
 
 threading.Thread(
     target=handle.run,
-    daemon=False
+    daemon=True
 ).start()
 
 
-info = {
-    "name" : "Accer-Lapatopa",
-    "price" : 10,
-    "stock" : 10
-}
+info = ("name", "mac")
 
 db_handle = Dobject(handle, "products")
-
+'''
+Initiation of Models
+ + Search for existing product with anchor information
+ + Fetch and sync with DB
+ + Make edits and sync with DB-about information of the object
+'''
 p = Product(info, db_handle)
-p.stock()
+print(f"Product Initiated with information : {p.information}")
+p.stock()  # NEEDs to check with sync function for validating request
+
+print(f"Product after stock update : {p.information}")

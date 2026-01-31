@@ -12,21 +12,21 @@ class Executor:
         self.tasks = Queue(maxsize=10)
 
     def run(self):
-        connection = sql.connect(self.path)
-        cursor = connection.cursor()
 
         while True:
+
             task = self.tasks.get()
+            print(f"Task Fetched as : {task}")
 
             query = task.query
             data = task.data
+            with sql.connect(self.path) as connection:
+                cursor = connection.cursor()
 
-            try:
-                cursor.execute(query, data)
-                connection.commit()
-                task.status = "done"
+                try:
+                    print(f"Final DB-LINK : {query} with Data | {data}")
+                    cursor.execute(query, data)
+                    connection.commit()
+                except Exception as e:
+                    print(f"Exception Rasied at Executor : {e}")
 
-            except Exception as e:
-                connection.rollback()
-                print(f"Exception rasied as : {e}")
-                task.status = "failed"

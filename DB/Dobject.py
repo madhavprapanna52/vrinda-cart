@@ -98,7 +98,7 @@ class Dobject:
             query=query,
             data=values
         )
-        print(f"final Task for making edit : {task}")
+        print(f"FINAL EDIT TASK {task}")
         self.executor.tasks.put(task)
         return task.status
 
@@ -117,4 +117,3 @@ class Dobject:
 
         self.executor.tasks.put(task, values)
         return task.status
-

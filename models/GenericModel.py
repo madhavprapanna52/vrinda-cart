@@ -14,6 +14,4 @@ class GenericModel:
         + Initiate via Dobject request
         + Edit request syncs information level
         '''
-        self.db_handle = db_handle
-        creation_request = self.db_handle.create(information)
-        print(f"Creation request output :{creation_request}")
+        

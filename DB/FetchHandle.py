@@ -5,7 +5,7 @@ class Fetch:
     def __init__(self):
         self.path = os.getenv("DB_LINK") 
 
-    def filter(self, query, data):
+    def filter(self, query, data):  # INFO : Include with inbuilt QueryBuilder for Making fetch request
         with sql.connect(self.path) as connection:
             cursor = connection.cursor()
             print(f"Debug data before execution as {query} with data : {data}")
