@@ -6,11 +6,12 @@ Data base object data flow unit
 + Initiation only if exist
 + create tool for creating the required data entry first
 """
-from FetchHandle import *
-from QueryBuilder import *
+from DB.FetchHandle import *
+from DB.QueryBuilder import *
 import os
 from typing import Tuple, Any
 from dataclasses import dataclass
+
 
 @dataclass
 class Task:
@@ -18,7 +19,7 @@ class Task:
     data: Tuple[Any, ...]
     status : str = "pending"  # pending | done | failed
 
-
+    # TODO : Make fetching function at Dobject for reading informations about a target
 class Dobject:
     def __init__(self, handle, table_name):
         '''
@@ -75,6 +76,7 @@ class Dobject:
         print(f"Run next time with including thread for execution function")
         self.executor.tasks.put(task)
         self.executor.run()  # Making query to run :)
+        return task.status
 
     def edit(self, edit_information, anchor_information):
         '''
@@ -101,6 +103,7 @@ class Dobject:
         return task.status
 
     def delete(self, anchor_information):
+        # INFO : No cascade operation happens after delete query 
         s = anchor_information[0]
         query = self.build_query.delete(s)
 
@@ -112,6 +115,6 @@ class Dobject:
             data=values
         )
 
-        self.executor.put(task, values)
+        self.executor.tasks.put(task, values)
         return task.status
 

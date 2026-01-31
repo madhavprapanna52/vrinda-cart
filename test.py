@@ -1,23 +1,24 @@
 import threading
-from DB.Execute import *
-from DB.DB_Endpoint import *
+from DB.ExecutorHandle import *
+from models.Productv1 import *
+from DB.Dobject import *
 
-path = "/home/madhav/Projects/vrinda-cart/DB/vrinda-cart.db"
-central_executor = Executor(path)
+
+handle = Executor()
 
 threading.Thread(
-    target=central_executor.run,
+    target=handle.run,
     daemon=False
 ).start()
 
-product_endpoint = Endpoint("products", central_executor)
 
 info = {
-    "name" : "AccerLaptop",
+    "name" : "Accer-Lapatopa",
     "price" : 10,
     "stock" : 10
 }
 
-target = ("id" : 1)
-product_endpoint.edit(edit, target)
+db_handle = Dobject(handle, "products")
 
+p = Product(info, db_handle)
+p.stock()

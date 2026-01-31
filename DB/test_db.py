@@ -29,6 +29,6 @@ d = Dobject(handle, table_name)
 edit_information = ["name", "Rools-royce"]
 anchor_information = ["id", 1]  # test with one as string
 
-r = d.edit(edit_information, anchor_information)  # End point request
+r = d.delete(anchor_information)  # End point request
 print(f"creation result as : {r}")
 

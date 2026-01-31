@@ -1,7 +1,7 @@
 """
 Central Executor for running query and data flow
 """
-from QueryBuilder import *
+from DB.QueryBuilder import *
 import sqlite3 as sql 
 from queue import Queue
 import os
@@ -24,7 +24,6 @@ class Executor:
             try:
                 cursor.execute(query, data)
                 connection.commit()
-                print(f"Query Executed")
                 task.status = "done"
 
             except Exception as e:
