@@ -34,7 +34,6 @@ class QueryBuilder:
     def edit(self, target_column:str, condition_information:str):
         column = condition_information
         query = f'update {self.table} set {target_column} = ? where {column} = ?'
-        print(f"For update query to work it requires target edit string or data with condition value in a tuple ")
         return query
 
     def delete(self, condition_column:str):

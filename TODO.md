@@ -34,5 +34,8 @@ Working DB-Unit Implemented with working threaded executions :)
 + Improve with making good ready frontend api endpoints for final application frontend
 + Refine frontend with awesome cool UI-UX work to wrap up project completion towards working MVP :)
 
+--------------------------------------------- 
+Again the main stuff is broken --> needs to be fixed with all power i have
+
 
 # Make sure to complete all front-end requirements for robust and real front-end

@@ -8,21 +8,24 @@ handle = Executor()
 
 threading.Thread(
     target=handle.run,
-    daemon=True
+    daemon=False
 ).start()
+
+# INFO : Threading configurations introduced some inconsistency with the DB-link 
 
 
 info = ("name", "mac")
 
-db_handle = Dobject(handle, "products")
-'''
-Initiation of Models
- + Search for existing product with anchor information
- + Fetch and sync with DB
- + Make edits and sync with DB-about information of the object
-'''
-p = Product(info, db_handle)
-print(f"Product Initiated with information : {p.information}")
-p.stock()  # NEEDs to check with sync function for validating request
+new_product = {
+    "name" : "Gammer Laptop Nokia",
+    "price" : 1700,
+    "stock" : 1
+}
 
-print(f"Product after stock update : {p.information}")
+column_list = "id,name,price,stock".split(",")
+db_handle = Dobject(handle, "products",column_list, info)
+
+db_handle.create(new_product)
+
+
+

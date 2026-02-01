@@ -12,7 +12,7 @@ class Product:
         self.columns = "name,price,stock".split(",")  # critical :)
         self.sync()  # Making sync at Initiation level
 
-    def sync(self):  # BUG : Synchronisation inst working
+    def sync(self):  # FIX : Move sync function to the Dobject level
         ''' Takes request from DB --> Updates the information dict '''
         columns = self.columns 
 
