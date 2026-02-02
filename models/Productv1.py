@@ -1,45 +1,63 @@
+'''
+Product Model
+Mentain stocks ~
 
+adding to cart -> Reserve one stock
+    * potential stock conflicts
+    Checks for stock availability
+        -> Warn user if stock gets ordered fasty
+        -> Check once via frontend handle for stock information
+        -> Outof stock returning endpoint
+        -> Final transaction endpoint updates the stock number
+
+Features
+    1. stock update
+    2. validating cart requirements
+    3. transaction endpoint
+'''
+from DB.Dobject import *
 
 class Product:
-    def __init__(self, anchor_information, handle):
+    '''
+    Information flow via Dobject endpoints
+    -> availability check endpoint
+    -> Final transaction endpoint for products
+    -> Trasaction endpoint
+    '''
+    def __init__(self, executor_handle, anchor_information):
+        columns_list = "id,name,price,stock".split(",")  # information list
+        self.handle = Dobject(executor_handle,"products", columns_list, anchor_information)
+        self.handle.sync()
+
+    def update_stock(self, update=-1):
         '''
-        If it exist then only we would load information from DB
-        '''
-        self.information = {}  # information dictionary
+        Make Edit request -> send to handle --> get information '''
+        self.handle.sync()
+        stock_instance = self.handle.information["stock"]
 
-        self.anchor_information = anchor_information
-        self.handle = handle
-        self.columns = "name,price,stock".split(",")  # critical :)
-        self.sync()  # Making sync at Initiation level
-
-    def sync(self):  # FIX : Move sync function to the Dobject level
-        ''' Takes request from DB --> Updates the information dict '''
-        columns = self.columns 
-
-        status, result = self.handle.exist(self.anchor_information)
-
-        if status:
-            for k, v in zip(columns, result[0][1:]):
-                self.information[k] = v  # Initiating key value
-            return True # success GOAT INdenTatIon 
-        else:
+        valid_process = self.available(update)
+        if not(valid_process):
             return False
 
-    def stock(self, update=-1):
-        '''
-        fetch current stock
-        update it via update number | raise Error while stock out
-        commit into DB-unit
-        '''
-        try:
-            stock_instance = self.information["stock"]
-        except Exception as e:
-            return False
-        # Stock update request
-        stock_instance = int(stock_instance)
-        updated_stock = stock_instance + update # Making update
-        # stock update information
+        updated_stock = stock_instance + update
         edit_information = ("stock", updated_stock)
-        
-        self.handle.edit(edit_information, self.anchor_information)
-        sync_request = self.sync()
+
+        self.handle.edit(edit_information)
+        print(f"Edit Executed with information : {self.handle.fetch_information()}")
+        return True # Executed Update
+
+
+
+    def available(self, request):
+        '''
+        Fetch current stock and try to subtract if its close to zero send warning '''
+        self.handle.sync()
+        stock_instance = self.handle.information["stock"]
+
+        result = stock_instance + request
+        if result <= 0:
+            return False
+        else:
+            return True
+
+

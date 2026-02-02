@@ -1,7 +1,6 @@
 """
 Central Executor for running query and data flow
 """
-from DB.QueryBuilder import *
 import sqlite3 as sql 
 from queue import Queue
 import os

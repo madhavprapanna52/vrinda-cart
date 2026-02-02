@@ -39,3 +39,10 @@ Again the main stuff is broken --> needs to be fixed with all power i have
 
 
 # Make sure to complete all front-end requirements for robust and real front-end
+
+----------------------------------------------
+New Updates for Project DB and Backend part
+Introducing triggers and atomic checkout triggers and constraints at schema level
+-> Automatic bill computation
+-> Final checkout via schema making error and triggers based approach for the final checkout
+-> Making DB Based calling mechanism into python to respond to the DB functions and views

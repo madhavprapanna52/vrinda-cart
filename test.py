@@ -1,20 +1,17 @@
 import threading
 from DB.ExecutorHandle import *
 from models.Productv1 import *
-from DB.Dobject import *
 
 
 handle = Executor()
 
 threading.Thread(
-    target=handle.run,
+    target=handle.run,  # target function starts with thread ad lives even after main thread
     daemon=False
 ).start()
 
-# INFO : Threading configurations introduced some inconsistency with the DB-link 
 
-
-info = ("name", "mac")
+info = ("name", "mac")  # Anchor information 
 
 new_product = {
     "name" : "Gammer Laptop Nokia",
@@ -22,10 +19,10 @@ new_product = {
     "stock" : 1
 }
 
-column_list = "id,name,price,stock".split(",")
-db_handle = Dobject(handle, "products",column_list, info)
+p = Product(handle, info)
 
-db_handle.create(new_product)
+re = p.update_stock()
+print(f"Update response {re}")
 
 
 

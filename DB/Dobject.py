@@ -31,7 +31,7 @@ class Dobject:  # working
         Initiation flow
         search DB --> Initiate if exist --> terminate initiation
         '''
-        self.anchor = anchor  # identification of Element
+        self.anchor = anchor  # identification of Element I am writing now
         self.information = {}  # sync updates information dictioinary
         self.columns_list = columns_list
         self.table_name = table_name
@@ -48,7 +48,6 @@ class Dobject:  # working
         iterate and update the information dictionary 
         returns : bool [ check for existence and initiation status ]
         '''
-        
         condition_string, value = self.anchor # tuple -> info 
         value = tuple([value])
         query = self.query_builder.instance(condition_string=condition_string)
@@ -64,12 +63,10 @@ class Dobject:  # working
         else:
             return False
 
-    def fetch_information(self, required_column):  # working
+    def fetch_information(self):  # working
         ''' Makes fetch request and takes required column from target '''
         self.sync()
-        r = self.information[required_column]
-        print(f"See After sync , {r}")
-        return r  # returns the required information 
+        return self.information  # returning information dictionary
 
     def create(self, information):
         '''
@@ -95,8 +92,6 @@ class Dobject:  # working
 
         # requesting Executor
         self.executor.tasks.put(creation_task)
-        # FIX : time.sleep(1)  # without time constraints the main fails
-        # Inspecting task timeline
         print(f"Task status just after joining the queue : {creation_task.status}")
         time.sleep(2)
         print(f"Task status after one second {creation_task.status}")
@@ -107,7 +102,7 @@ class Dobject:  # working
         self.sync()  # sync function for Object-DB sync New initialised
 
 
-    def edit(self, edit_information, anchor_information):
+    def edit(self, edit_information):
         '''
         edit_information : (column_to_edit, final_thing )
         Information dict -> anchor information
@@ -117,18 +112,25 @@ class Dobject:  # working
         Flow
         edit information -> build query -> execution request
         '''
-        target_column = edit_information[0]
-        condition_information = anchor_information[0]
-        query = self.build_query.edit(target_column, condition_information)
-        values = [edit_information[1], anchor_information[1]]
-        values = tuple(values) # values information
-        # Edit task information
-        task = Task(
-            query=query,
+        target = edit_information[0]
+        condition = self.anchor[0]
+        edit_query = self.query_builder.edit(target, condition)
+
+        # Payload for edit
+        edit = edit_information[1]
+        val = self.anchor[1]
+        values = [edit, val]
+        values = tuple(values)  # final tuple
+
+        edit_task = Task(
+            query=edit_query,
             data=values
         )
-        self.executor.tasks.put(task)
+        self.executor.tasks.put(edit_task)
+        time.sleep(2)  # execution thead clash main -> executor 
         self.sync()
+        print(f"Final Information fetch : {self.fetch_information()}")
+
 
 
     def delete(self, anchor_information):
@@ -143,6 +145,7 @@ class Dobject:  # working
             query=query,
             data=values
         )
+        # Working unit for the delete section
 
         self.executor.tasks.put(task, values)
 
