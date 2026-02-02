@@ -134,7 +134,7 @@ class Dobject:  # working
 
 
     def delete(self, anchor_information):
-        # INFO : No cascade operation happens after delete query 
+        # INFO : Making cascade options at DB level
         s = anchor_information[0]
         query = self.build_query.delete(s)
 

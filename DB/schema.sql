@@ -1,10 +1,22 @@
 PRAGMA foreign_keys = ON;
+/*
+Schema Desing targets
 
--- Product
+Data Entries
+products, cart, orders
+
+Constraints
+  + preventing negetive stock update
+  + Preventing wrong request into the cart of user
+  + Initiating trigger for adding order id with given product id
+ */
+
+-- Data Flow core objects tables
+
 CREATE TABLE products (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL UNIQUE,
-  price REAL NOT NULL CHECK (price >= 0),
+  price REAL NOT NULL CHECK (price >= 0), -- Used constraints with check
   stock INTEGER NOT NULL CHECK (stock >= 0)
 );
 
@@ -16,6 +28,8 @@ CREATE TABLE cart (
   PRIMARY KEY (user_id, product_id), -- Both are combinedly primary key
   FOREIGN KEY (product_id) REFERENCES products(id)
 );
+
+-- TODO : Make cart addition verification trigger for adding products only if available and warn for stockout situation if found
 
 CREATE TABLE users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -29,6 +43,13 @@ CREATE TABLE orders (
   user_id INTEGER NOT NULL,
   created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
+
+/*
+Order insertion trigger
+Checkout trigger flow
++ user_id ~ fetch product from order table
++ make update the stock into the table
+*/
 
 -- view : BILL computation | Making joins and final computation
 CREATE VIEW cart_bill AS
