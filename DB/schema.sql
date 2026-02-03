@@ -30,6 +30,18 @@ create table orders(
   foreign key (user_id) references users(id)
 );
 
+create table order_items(
+	order_id integer not null,
+	user_id integer not null,
+	product_id integer not null,
+	quantity integer not null,
+	price_at_purchase real not null,
+	
+	foreign key (order_id) references orders(id),
+	foreign key (user_id) references users(id),
+	foreign key (product_id) references products(id)
+);
+
 /*
 Bill computation
 fetch cart instances and product instance
@@ -65,6 +77,18 @@ end;
 create trigger finalize_checkout
 after insert on orders
 begin
+	-- storing history
+	insert into order_items (order_id, user_id, product_id, quantity, price_at_purchase)
+	select
+		new.id,
+		c.user_id,
+		c.product_id,
+		c.quantity,
+		p.price
+	from cart c
+	join products p on p.id = c.product_id
+	where c.user_id = new.user_id;
+
 	-- Reduce stock
 	update products
 	set stock = stock - (
