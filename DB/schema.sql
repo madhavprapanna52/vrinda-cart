@@ -3,7 +3,7 @@ pragma foreign_keys = ON;
 -- Basic table setup
 
 create table products(
-  id integer primary key,
+  id integer primary key autoincrement,
   name text not null unique,
   price real not null check(price >= 0),
   stock integer not null check(stock >= 0)
@@ -110,3 +110,34 @@ begin
 	-- clear cart
 	delete from cart where user_id = new.user_id;
 end;
+
+-- cart items view
+create view cart_items as
+select
+  c.user_id,
+  c.product_id,
+  p.name as product_name,
+  c.quantity as quantity,
+  p.price as price,
+  round(c.quantity * p.price, 2) as total
+from cart c
+join products p on p.id = c.product_id;
+
+-- select * from cart_items where user_id = ?
+
+-- Order history fetch
+create view order_items_view as
+select
+  o.id as order_id,
+  o.user_id,
+  o.created_at,
+  oi.product_id,
+  p.name as product_name,
+  oi.quantity,
+  oi.price_at_purchase,
+  round(oi.quantity * oi.price_at_purchase, 2) as line_total
+from orders o
+join order_items oi on oi.order_id = o.id
+join products p on p.id = oi.product_id;
+
+-- select * from order_items_view where user_id = ?
