@@ -1,97 +1,88 @@
-PRAGMA foreign_keys = ON;
-/*
-Schema Desing targets
+pragma foreign_keys = ON;
 
-Data Entries
-products, cart, orders
+-- Basic table setup
 
-Constraints
-  + preventing negetive stock update
-  + Preventing wrong request into the cart of user
-  + Initiating trigger for adding order id with given product id
- */
-
--- Data Flow core objects tables
-
-CREATE TABLE products (
-  id INTEGER PRIMARY KEY,
-  name TEXT NOT NULL UNIQUE,
-  price REAL NOT NULL CHECK (price >= 0), -- Used constraints with check
-  stock INTEGER NOT NULL CHECK (stock >= 0)
+create table products(
+  id integer primary key,
+  name text not null unique,
+  price real not null check(price >= 0),
+  stock integer not null check(stock >= 0)
 );
 
--- CART
-CREATE TABLE cart (
-  user_id INTEGER,
-  product_id INTEGER,
-  quantity INTEGER NOT NULL CHECK (quantity > 0)
-  PRIMARY KEY (user_id, product_id), -- Both are combinedly primary key
-  FOREIGN KEY (product_id) REFERENCES products(id)
+create table cart(
+  user_id integer,
+  product_id integer,
+  quantity integer not null check(quantity >= 0),
+  primary key (user_id, product_id),
+  foreign key (product_id) references products(id)
 );
 
--- TODO : Make cart addition verification trigger for adding products only if available and warn for stockout situation if found
-
-CREATE TABLE users (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name TEXT UNIQUE NOT NULL,
-  password TEXT NOT NULL
+create table users(
+  id integer primary key autoincrement,
+  name text unique not null,
+  password text not null
 );
 
--- order 
-CREATE TABLE orders (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  user_id INTEGER NOT NULL,
-  created_at TEXT DEFAULT CURRENT_TIMESTAMP
+create table orders(
+  id integer primary key  autoincrement,
+  user_id integer not null,
+  created_at text default current_timestamp,
+  foreign key (user_id) references users(id)
 );
 
 /*
-Order insertion trigger
-Checkout trigger flow
-+ user_id ~ fetch product from order table
-+ make update the stock into the table
+Bill computation
+fetch cart instances and product instance
+compute the total with making computation and group them with user_id
 */
 
--- view : BILL computation | Making joins and final computation
-CREATE VIEW cart_bill AS
-SELECT 
+create view cart_bill as
+select
   c.user_id,
-  SUM(p.price * c.quantity) AS total_amount
-FROM cart c
-JOIN products p on p.id = c.product_id
-GROUP BY c.user_id;
+  round(sum(p.price * c.quantity), 2) as total_amount
+	from cart c
+	join products p on p.id = c.product_id
+	group by c.user_id;
 
--- Making check at cart addition for preventing un-available stock request
-CREATE TRIGGER prevent_negative_stock
-BEFORE INSERT ON orders
-BEGIN
-  SELECT 
-    CASE
-      WHEN EXISTS (
-        SELECT 1
-        FROM cart c 
-        JOIN products p on p.id = c.product_id
-        WHERE c.user_id = NEW.user_id
-        AND p.stock < c.quantity
-      )
-      THEN RAISE(ABORT, 'Insufficient stock')
-    END;
-END;
+-- stock out prevention during checkout
+create trigger prevent_checkout_insufficient_stock
+before insert on orders
+begin
+	select
+		case
+			when exists(
+			select 1
+			from cart c
+			join products p on p.id = c.product_id
+			where c.user_id = new.user_id
+			and p.stock < c.quantity -- if less stock detected prevent checkout
+		)
+		then raise(abort, 'Insufficient stock')
+		end;
+end;
 
-CREATE TRIGGER finalize_checkout
-AFTER INSERT ON orders
-BEGIN
-  -- REDUCE STOCK FROM PRODUCTS
-  UPDATE products
-  SET stock = stock - (
-    SELECT quantity
-    FROM cart
-    WHERE cart.product_id = products.id
-    AND cart.user_id = NEW.user_id
-  ) -- quantity fetch from cart for updating stock at product level
-  WHERE id in (
-    SELECT product_id from cart WHERE user_id = NEW.user_id
-  );
-
-  -- clear cart
-  DELETE FROM cart WHERE user_id = NEW.user_id;
-END;
+-- Final checkout : Order insertion based logic
+create trigger finalize_checkout
+after insert on orders
+begin
+	-- Reduce stock
+	update products
+	set stock = stock - (
+		select c.quantity
+		from cart c
+		where c.product_id = products.id
+		and c.user_id = new.user_id
+	)
+	/*
+	Loop turns for deducting quantity value of cart
+	Existing product id in cart with user_id inserted into orders
+	*/
+	where exists(
+		select 1 from cart
+		where cart.product_id = products.id
+		and cart.user_id = new.user_id
+	);
+	
+	-- clear cart
+	delete from cart where user_id = new.user_id;
+end;
