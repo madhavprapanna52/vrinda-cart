@@ -1,42 +1,76 @@
-# Vrinda-cart
-Goal : Exploring web-dev via simple projects for hands on with edges and problems of making working product which is useful and could be implemented with model or scaled up solution.
+# VRINDA - CART
+A application which gives online platform for shops to sell their products
+Features [Targeted]
+1. Products listing page
+2. User login system
+3. Orders and stocks managers
+4. Admin dashboard for sellers
+5. custom sales man for individual customers
+6. User Personalised Experience with ML
 
-## Project Overview
+## Technical overview
 
-user --> explores shops and products --> makes payment
+Project structure
+```
+vrinda-cart
+|--DB/
+    |--/images
+        |-- links.txt # image storage table
+    |--/sql
+        |-- schema.sql  # tables design
+        |-- view.sql  # views fetch
+        |-- trigger.sql # atomic triggers
+    |-- Object.py  # custom mini ORM
+    |-- QueryBuilder.py  # Query generator
+    |-- Executor.py  # central executor unit
+    |-- tools.py  # helper functions
+|--Models/
+    |-- User.py
+    |-- Cart.py
+    |-- Product.py
+|--Auth/
+    |-- Access.py  # sessions manager
+    |-- Login.py  # Authentication unit
+|--Routes/
+    |-- Products_listing.py # listing routes
+    |-- Account.py
+|--API/
+    |--routing.py  # central routing gateway for request
+    |-- user.py
+    |-- product.py
+    |-- cart.py
+|--Tests/
+    |-- db_test.py  # db testing
+    |-- models_flow.py  # models testing
+    |-- integration_test.py
+|--static/
+    |--js/
+        |-- ProductComponent.js  # custom webcomponent for products card
+        |-- Route.js  # central front-end request handler
+        |-- UserInfo.js  # user information fetch
+        |-- Cart.js  # cart requests and functions
+    |--images/
+        |-- logo.svg  # custom logo
+        |-- shop.svg # custom shop icon design
+        |-- cart.svg
+        |-- icon.svg
+    |--css/
+        |-- main.css  # global styling 
+        |--products.css
+        |--login.css
+        |--user.css 
+|--templates/
+    |-- index.html  # landing page layout
+    |-- products.html  # products page
+    |-- user.html  #user page 
+    |-- login.html # login page
+|-- run.py
+|-- README.md
+```
 
+## Development Note
+Project is under active development special features of ML and personalisations have not been implemented yet but scoped for future expansion currently a basic website foundation is to be laid and working and development is shared in linked in and explained on youtube
 
-Technical overview
-+ Used Multiple layers of abstractions and usefull reusable code at low level of DB endpoint to understand about CRUDE operations
-+ tried to make generalised DB end point for future expansion of code for upgrade
-+ Made foundational mechanism which is working on surface level testing
-+ Making web-components based development for custom elements.
-
-Details of Project working
-
-1. Custom DB-endpoint made using sqlite3 DB, Handles basic DB-operations
-2. Made general DB object which is abstracted to handle objects data flow at DB-endpoint level
-3. Made 2 custom objects on top of general db-object to resemble basic user and product a lot to build on top
-4. user and product are classes which initialise and inherit from general db to make good data flow and operations
-5. Tried to Make crafted abstract and easy to implement front-end friendly basic backend design
-
-Scope of project and potential
-=> Project could be upgraded due to its abstract and simple nature thus have potential to turn into B2C buisness
-=> Transactions and user history is traced to build ML units such as recommendation system to deploy and test on such senarios
-=> Could be used to study real buisness with some testing to deploy on real world
-
-Future Targets
-1. Refactor code for more robust and optimized code for more reliable backend system [completed]
-2. Implement seamless , real world payment gateway and advanced security to inhance its responsibility in real world.
-3. Introduce custom sales man tailoured to user to recommend user items and drives sales via using smart models.
-4. Deploying project to real users and understand real buisness via local full scale driving model
-
-Final Note
-- Project is under development and their are many things to complete test and refactor, do fork it and contribute if you feel like :)
-
-
-Targets
-1. Implement final touch for transactions storage system
-2. Make basic frontend ready api systems
-3. wraping code into flask for final backend working
-4. Implement basic frontend using compoenent based development with js power +U+
+## Collaborations and Contributions
+I am happy to collaborate with individual who would like to contribute and learn
+DO mail me at : madhavprapanna@gmail.com
